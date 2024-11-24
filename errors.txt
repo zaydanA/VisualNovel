@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/gui.rpy", line 100: expected expression
-    define gui.textbox_height = 
-                                ^
+File "game/script.rpy", line 807: is not terminated with a newline. (Check strings and parenthesis.)
+(Perhaps you left out a " at the end of the first line.)
+        kartika Benarkah, A-arya?"
 
 Ren'Py Version: Ren'Py 8.3.2.24090902
-Fri Nov 22 08:29:36 2024
+Sun Nov 24 14:39:08 2024
