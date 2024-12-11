@@ -256,7 +256,7 @@ screen quick_menu():
             textbutton _("Save") action ShowMenu('save')
             textbutton _("Q.Save") action QuickSave()
             textbutton _("Q.Load") action QuickLoad()
-            textbutton _("Prefs") action ShowMenu('preferences')
+            textbutton _("Options") action ShowMenu('options')
 
 
 ## This code ensures that the quick_menu screen is displayed in-game, whenever
@@ -303,22 +303,31 @@ screen navigation():
                 # hover "gui/buttonstart_hover.png"  # Image when hovered
                 action Start()  # The action to take when clicked
         else:
-
+            textbutton _("Restart") action Start()
             textbutton _("History") action ShowMenu("history")
 
             textbutton _("Save") action ShowMenu("save")
 
-        # textbutton _("Start") action Start()
-        imagebutton:
-            idle "gui/button_load.png"  # The default image
-            # hover "gui/buttonstart_hover.png"  # Image when hovered
-            action ShowMenu("load")
-        # textbutton _("Preferences") 
-        imagebutton:
-            idle "gui/button_options2.png"  # The default image
-            # hover "gui/buttonstart_hover.png"  # Image when hovered
-            # action ShowMenu("load")
-            action ShowMenu("preferences")
+
+        if main_menu:
+            imagebutton:
+                idle "gui/button_load.png"  # The default image
+                # hover "gui/buttonstart_hover.png"  # Image when hovered
+                action ShowMenu("load")
+        else:
+            textbutton _("Load") action ShowMenu("load")
+
+
+        if main_menu:
+
+            imagebutton:
+                idle "gui/button_options2.png"  # The default image
+                # hover "gui/buttonstart_hover.png"  # Image when hovered
+                # action ShowMenu("load")
+                action ShowMenu("options")
+        else:
+            textbutton _("Options") action ShowMenu("options")
+
 
         if _in_replay:
             textbutton _("End Replay") action EndReplay(confirm=True)
@@ -326,18 +335,24 @@ screen navigation():
         elif not main_menu:
 
             textbutton _("Main Menu") action MainMenu()
-
-        imagebutton:
-            idle "gui/button_about2.png"  # The default image
-            action ShowMenu("about")
+        
+        
+        if main_menu:
+            imagebutton:
+                idle "gui/button_about2.png"  # The default image
+                action ShowMenu("about")
+        else:
+            textbutton _("About") action ShowMenu("about")
+        
 
         if renpy.variant("pc") or (renpy.variant("web") and not renpy.variant("mobile")):
-
-            ## Help isn't necessary or relevant to mobile devices.
-            imagebutton:
-                idle "gui/button_help2.png"  # The default image
-                action ShowMenu("help")
-
+            if main_menu:
+                ## Help isn't necessary or relevant to mobile devices.
+                imagebutton:
+                    idle "gui/button_help2.png"  # The default image
+                    action ShowMenu("help")
+            else:
+                textbutton _("Help") action ShowMenu("help")                
         # if renpy.variant("pc"):
 
         #     ## The quit button is banned on iOS and unnecessary on Android and
@@ -741,11 +756,11 @@ style slot_button_text:
 ##
 ## https://www.renpy.org/doc/html/screen_special.html#preferences
 
-screen preferences():
+screen options():
 
     tag menu
 
-    use game_menu(_("Preferences"), scroll="viewport"):
+    use game_menu(_("Options"), scroll="viewport"):
 
         vbox:
 
@@ -1544,7 +1559,15 @@ screen quick_menu():
             textbutton _("Auto") action Preference("auto-forward", "toggle")
             textbutton _("Menu") action ShowMenu()
 
+screen custom_game_menu_button():
+    vbox:
+        align (0, 0.02)  # Top-right corner
+        spacing 10
 
+        imagebutton:
+            idle "gui/button_esc.png"
+            action ShowMenu("options")
+            focus_mask True  # Makes the button clickable only on the visible part of the image
 style window:
     variant "small"
     background "gui/phone/textbox.png"

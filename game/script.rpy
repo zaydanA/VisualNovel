@@ -142,8 +142,8 @@ transform midright:
 # The game starts here.
 
 label start:
-
-    scene bg kantorkeroco
+    show screen custom_game_menu_button
+    scene bg depankantor
 
     # play sound "audio 1.mp3"
     # play music "Lagu KWN Scene 1.mp3" fadein 2 fadeout 2
@@ -265,7 +265,7 @@ label a2_2:
 # label b1: 
 label b1: 
 
-    scene bg kantorkeroco2 with wipeleft
+    scene bg ruangrapat with wipeleft
 
 
 
@@ -318,7 +318,8 @@ label c3_1:
     show kartikasexy 
     play sound "dialog.mp3"
     kartika "Oke Mas, sebentar ya aku ke toilet dulu."
-    hide kartikanormal with easeoutright
+    
+    hide kartikasexy with easeoutright
     $ renpy.pause(1.5)
     hide aryasmile
     show aryanormal at left
