@@ -310,32 +310,39 @@ screen navigation():
 
         # textbutton _("Start") action Start()
         imagebutton:
-            idle "gui/button_loadt.png"  # The default image
+            idle "gui/button_load.png"  # The default image
             # hover "gui/buttonstart_hover.png"  # Image when hovered
             action ShowMenu("load")
-
-        textbutton _("Preferences") action ShowMenu("preferences")
+        # textbutton _("Preferences") 
+        imagebutton:
+            idle "gui/button_options2.png"  # The default image
+            # hover "gui/buttonstart_hover.png"  # Image when hovered
+            # action ShowMenu("load")
+            action ShowMenu("preferences")
 
         if _in_replay:
-
             textbutton _("End Replay") action EndReplay(confirm=True)
 
         elif not main_menu:
 
             textbutton _("Main Menu") action MainMenu()
 
-        textbutton _("About") action ShowMenu("about")
+        imagebutton:
+            idle "gui/button_about2.png"  # The default image
+            action ShowMenu("about")
 
         if renpy.variant("pc") or (renpy.variant("web") and not renpy.variant("mobile")):
 
             ## Help isn't necessary or relevant to mobile devices.
-            textbutton _("Help") action ShowMenu("help")
+            imagebutton:
+                idle "gui/button_help2.png"  # The default image
+                action ShowMenu("help")
 
-        if renpy.variant("pc"):
+        # if renpy.variant("pc"):
 
-            ## The quit button is banned on iOS and unnecessary on Android and
-            ## Web.
-            textbutton _("Quit") action Quit(confirm=not main_menu)
+        #     ## The quit button is banned on iOS and unnecessary on Android and
+        #     ## Web.
+        #     textbutton _("Quit") action Quit(confirm=not main_menu)
 
 
 style navigation_button is gui_button
@@ -392,7 +399,7 @@ style main_menu_frame:
     xsize 420
     yfill True
 
-    background "gui/overlay/main_menu.png"
+    # background "gui/overlay/main_menu.png"
 
 style main_menu_vbox:
     xalign 1.0

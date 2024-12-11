@@ -2,9 +2,7 @@
 errors listed below, and try again.
 
 
-File "game/gui.rpy", line 110: expected expression
-    define gui.name_ypos = 
-                           ^
+File "game/screens.rpy", line 332: Indentation mismatch.
 
 Ren'Py Version: Ren'Py 8.3.2.24090902
-Wed Dec 11 13:16:57 2024
+Wed Dec 11 13:48:00 2024
