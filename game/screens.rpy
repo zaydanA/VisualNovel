@@ -297,8 +297,11 @@ screen navigation():
 
         if main_menu:
 
-            textbutton _("Start") action Start()
-
+            # textbutton _("Start") action Start()
+            imagebutton:
+                idle "gui/buttonstart_idle.png"  # The default image
+                # hover "gui/buttonstart_hover.png"  # Image when hovered
+                action Start()  # The action to take when clicked
         else:
 
             textbutton _("History") action ShowMenu("history")

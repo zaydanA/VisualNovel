@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 94: expected '=' not found.
-    image gubernurnormal
-                        ^
+File "game/screens.rpy", line 301: the xpos keyword argument was not given a value.
+    imagebutton auto "gui/star button.png" xpos
+                                               ^
 
 Ren'Py Version: Ren'Py 8.3.2.24090902
-Wed Dec  4 15:35:45 2024
+Wed Dec 11 12:16:06 2024

@@ -141,7 +141,7 @@ transform midright:
 
 # The game starts here.
 
-label start2:
+label start:
 
     scene bg kantorkeroco
 
@@ -925,7 +925,7 @@ label d1_3:
     jump e3
 
 
-label start:
+label e1:
     play sound "scene.mp3"
     scene bg kpk with wipeleft
 
