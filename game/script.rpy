@@ -3,20 +3,20 @@
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
 
-define arya = Character("Arya", color="#0000ff",what_cps=2)
+define arya = Character("Arya", color="#7171ff",what_cps=2)
 define bambang = Character("Bambang", color="#FFC0CB",what_cps=2) 
 define bosbesar = Character("Bos Besar", color="#00fff2",what_cps=2) 
 define kartika = Character("Kartika", color="#00ff4c",what_cps=2) 
 define dhiyal = Character("Dhiyal", color="#cab600",what_cps=2) 
 define tia = Character("Tia", color="#fdf7c1",what_cps=2) 
-define ibuarya = Character("Ibu Arya", color="#44003b",what_cps=2) 
-define maya = Character("Maya", color="#003b32",what_cps=2) 
-define hendra = Character("Hendra", color="#6f00ff",what_cps=2) 
-define petugas = Character("Petugas KPK", color="#050505",what_cps=2) 
-define gubernur = Character("Gubernur", color="#a10000",what_cps=2) 
-define telepon = Character("TELEPON", color="#000000",what_cps=2) 
-define pegawai1 = Character("Pegawai 1", color="#133300",what_cps=2) 
-define pegawai2 = Character("Pegawai 2", color="#223100",what_cps=2) 
+define ibuarya = Character("Ibu Arya", color="#ff6aeb",what_cps=2) 
+define maya = Character("Maya", color="#55ffe5",what_cps=2) 
+define hendra = Character("Hendra", color="#a561ff",what_cps=2) 
+define petugas = Character("Petugas KPK", color="#838383",what_cps=2) 
+define gubernur = Character("Gubernur", color="#ff5959",what_cps=2) 
+define telepon = Character("TELEPON", color="#ffd2d2",what_cps=2) 
+define pegawai1 = Character("Pegawai 1", color="#a7ff75",what_cps=2) 
+define pegawai2 = Character("Pegawai 2", color="#eeffc7",what_cps=2) 
 
 image aryanormal:
     "arya normal.png"
