@@ -3,7 +3,7 @@
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
 
-define arya = Character("Arya", color="#7171ff",what_cps=2)
+define arya = Character("Arya", color="#d6d6ff",what_cps=2)
 define bambang = Character("Bambang", color="#FFC0CB",what_cps=2) 
 define bosbesar = Character("Bos Besar", color="#00fff2",what_cps=2) 
 define kartika = Character("Kartika", color="#00ff4c",what_cps=2) 
