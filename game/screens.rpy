@@ -299,7 +299,7 @@ screen navigation():
 
             # textbutton _("Start") action Start()
             imagebutton:
-                idle "gui/buttonstart_idle.png"  # The default image
+                idle "gui/buttonstart_idle2.png"  # The default image
                 # hover "gui/buttonstart_hover.png"  # Image when hovered
                 action Start()  # The action to take when clicked
         else:

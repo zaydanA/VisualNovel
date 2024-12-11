@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/screens.rpy", line 301: the xpos keyword argument was not given a value.
-    imagebutton auto "gui/star button.png" xpos
-                                               ^
+File "game/gui.rpy", line 110: expected expression
+    define gui.name_ypos = 
+                           ^
 
 Ren'Py Version: Ren'Py 8.3.2.24090902
-Wed Dec 11 12:16:06 2024
+Wed Dec 11 13:16:57 2024
