@@ -316,12 +316,13 @@ screen navigation():
         style_prefix "navigation"
         xpos gui.navigation_xpos
         yalign 0.5
-        spacing gui.navigation_spacing
+        spacing 10
 
         if main_menu:
             imagebutton:
                 idle "gui/buttonstart_idle2.png"
                 action Start()
+                ypadding 5
         else:
             textbutton _("Restart") action Start()
             textbutton _("History") action ShowMenu("history")
@@ -339,6 +340,7 @@ screen navigation():
             imagebutton:
                 idle "gui/button_characters.png"  # Buat gambar button untuk characters
                 action ShowMenu("characters")
+                ypadding 5
         else:
             textbutton _("Characters") action ShowMenu("characters")
 
@@ -346,6 +348,7 @@ screen navigation():
             imagebutton:
                 idle "gui/button_options2.png"
                 action ShowMenu("options")
+                ypadding 5
         else:
             textbutton _("Options") action ShowMenu("options")
 
@@ -359,6 +362,7 @@ screen navigation():
             imagebutton:
                 idle "gui/button_about2.png"
                 action ShowMenu("about")
+                ypadding 5
         else:
             textbutton _("About") action ShowMenu("about")
 
@@ -367,6 +371,7 @@ screen navigation():
                 imagebutton:
                     idle "gui/button_help2.png"
                     action ShowMenu("help")
+                    ypadding 5
             else:
                 textbutton _("Help") action ShowMenu("help")
 
