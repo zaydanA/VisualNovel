@@ -58,6 +58,19 @@ style button_text is gui_text:
     properties gui.text_properties("button")
     yalign 0.5
 
+style navigation_button is gui_button
+style navigation_button_text is gui_button_text
+
+style navigation_button:
+    size_group "navigation"
+    properties gui.button_properties("navigation_button")
+    spacing 4
+
+style navigation_vbox:
+    spacing 4
+
+style navigation_button_text:
+    properties gui.text_properties("navigation_button")
 
 style label_text is gui_text:
     properties gui.text_properties("label", accent=True)
@@ -370,21 +383,6 @@ screen navigation():
                 textbutton _("End Replay") action EndReplay(confirm=True)
             elif not main_menu:
                 textbutton _("Main Menu") action MainMenu()
-
-    style navigation_button is gui_button
-    style navigation_button_text is gui_button_text
-
-    style navigation_button:
-    size_group "navigation"
-    properties gui.button_properties("navigation_button")
-    spacing 4
-    
-    style navigation_vbox:
-    spacing 4
-    
-    style navigation_button_text:
-    properties gui.text_properties("navigation_button")
-
 
 ## Main Menu screen ############################################################
 ##

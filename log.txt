@@ -1,4 +1,4 @@
-2024-12-14 07:33:33 UTC
+2024-12-14 07:36:24 UTC
 macOS-15.1.1-arm64-arm-64bit
 Ren'Py 8.3.3.24111502
 
@@ -8,11 +8,11 @@ Loading script took 0.13s
 Loading save slot metadata took 0.03s
 Loading persistent took 0.00s
 
-File "game/screens.rpy", line 320: 'ypadding' is not a keyword argument or valid child of the vbox statement.
-    ypadding 2     
-            ^
+File "game/screens.rpy", line 374: 'style' is not a keyword argument or valid child of the screen statement.
+    style navigation_button is gui_button
+         ^
 DPI scale factor: 1.000000
-Interface start took 0.25s
+Interface start took 0.42s
 
 Initializing gl2 renderer:
 primary display bounds: (0, 0, 1680, 1050)

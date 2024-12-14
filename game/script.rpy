@@ -112,7 +112,6 @@ image petugaskpknormal:
 # image dhiyalnormal:
 #     "dhiyal normal.png"
 #     zoom 1.75
-
 # image ibuaryanormal:
 #     "ibuarya normal.png"
 #     zoom 1.1 

@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/screens.rpy", line 320: 'ypadding' is not a keyword argument or valid child of the vbox statement.
-    ypadding 2     
-            ^
+File "game/screens.rpy", line 374: 'style' is not a keyword argument or valid child of the screen statement.
+    style navigation_button is gui_button
+         ^
 
 Ren'Py Version: Ren'Py 8.3.3.24111502
-Sat Dec 14 14:33:33 2024
+Sat Dec 14 14:36:24 2024
