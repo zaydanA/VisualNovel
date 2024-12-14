@@ -334,34 +334,44 @@ screen navigation():
         if main_menu:
             imagebutton:
                 idle "gui/buttonstart_idle2.png"
-                xpos 0  # Tetap di posisi awal
+                xpos -20  # Geser sedikit ke kiri
+                ypos 0    # Reset posisi vertikal
                 action Start()
+                xsize 250
+                ysize 60
 
             imagebutton:
                 idle "gui/button_load.png"
-                xpos 0
-                action ShowMenu("load")
-
-            imagebutton:
-                idle "gui/button_characters.png"  
-                xpos 0
-                action ShowMenu("characters")
+                xpos -20
+                ypos 10   # Tambah sedikit jarak vertikal
+                action ShowMenu("load") 
+                xsize 250
+                ysize 60
 
             imagebutton:
                 idle "gui/button_options2.png"
-                xpos 0
+                xpos -20
+                ypos 20
                 action ShowMenu("options")
+                xsize 250
+                ysize 60
 
             imagebutton:
                 idle "gui/button_about2.png"
-                xpos 0
+                xpos -20
+                ypos 30
                 action ShowMenu("about")
+                xsize 250
+                ysize 60
 
-            if renpy.variant("pc") or (renpy.variant("web") and not renpy.variant("mobile")):
+            if renpy.variant("pc"):
                 imagebutton:
                     idle "gui/button_help2.png"
-                    xpos 0
+                    xpos -20
+                    ypos 40
                     action ShowMenu("help")
+                    xsize 250
+                    ysize 60
 
         else:
             textbutton _("Restart") action Start()
