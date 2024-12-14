@@ -723,7 +723,7 @@ screen about():
                 spacing 20
                 vbox style "about_image_container":
                     add "gui/about/arfa.png" at photo_size
-                    text "Arfa Nasyahla & Azahra Layla Haqira\n17323033 - FSRD (PJ)" style "about_person"
+                    text "Arfa Nasyahla\n17323033 - FSRD (PJ)" style "about_person"
                 vbox style "about_image_container":
                     add "gui/about/Lala.png" at photo_size
                     text "Azahra Layla Haqira\n17323053 - FSRD (PJ)" style "about_person"
