@@ -41,11 +41,16 @@ style character_name:
     size 24
     color "#00cc99"
     bold True
-    padding (0, 10, 0, 5)
+    xpos 0  # Reset posisi horizontal
+    ypos 0  # Reset posisi vertikal
+    xsize 800  # Lebar maksimum teks
 
 style character_desc:
     size 20
     line_spacing 5
+    xpos 0  # Reset posisi horizontal
+    ypos 0  # Reset posisi vertikal
+    xsize 800  # Lebar maksimum teks
 
 style gui_text:
     properties gui.text_properties("interface")
@@ -734,6 +739,7 @@ screen characters():
                 spacing 20
                 add "gui/about/aryanormal.png" at photo_size
                 vbox:
+                    spacing 10
                     text "ARYA WICAKSANA (27)" style "character_name"
                     text "Pegawai negeri muda idealis, lulusan terbaik IPDN." style "character_desc"
                     text "Seorang pegawai negeri yang berpegang teguh pada integritas dan idealisme. Sebagai lulusan terbaik IPDN, ia memiliki tekad kuat untuk membawa perubahan dalam sistem birokrasi." style "character_desc"
@@ -743,6 +749,7 @@ screen characters():
                 spacing 20
                 add "gui/about/mayanormal.png" at photo_size
                 vbox:
+                    spacing 10
                     text "MAYA PERTIWI (26)" style "character_name"
                     text "Jurnalis investigasi yang kritis terhadap pemerintahan." style "character_desc"
                     text "Jurnalis berani yang selalu mengejar kebenaran. Memiliki jaringan luas dan kemampuan investigasi yang tajam dalam mengungkap kasus-kasus korupsi." style "character_desc"
@@ -752,6 +759,7 @@ screen characters():
                 spacing 20
                 add "gui/about/bambangnormal.png" at photo_size
                 vbox:
+                    spacing 10
                     text "BAMBANG SUDIARTO (55)" style "character_name"
                     text "Mentor Arya, pejabat senior yang berintegritas." style "character_desc"
                     text "Pejabat senior yang menjadi panutan bagi Arya. Sosok yang tegas namun bijaksana dalam membimbing pegawai muda menuju birokrasi yang bersih." style "character_desc"
@@ -761,6 +769,7 @@ screen characters():
                 spacing 20
                 add "gui/about/kartikanormal.png" at photo_size
                 vbox:
+                    spacing 10
                     text "KARTIKA DEWI (32)" style "character_name"
                     text "Pengusaha cantik yang sering berurusan dengan tender pemerintah." style "character_desc"
                     text "Pengusaha sukses yang memiliki hubungan dekat dengan banyak pejabat. Kecantikan dan kecerdasannya sering digunakan untuk melancarkan kepentingan bisnisnya." style "character_desc"
@@ -770,6 +779,7 @@ screen characters():
                 spacing 20
                 add "gui/about/hendranormal.png" at photo_size
                 vbox:
+                    spacing 10
                     text "HENDRA PRIBADI (45)" style "character_name"
                     text "Pejabat korup yang menjadi antagonis utama." style "character_desc"
                     text "Pejabat senior yang lihai dalam permainan tender dan suap-menyuap. Menjadi penghalang utama bagi upaya pemberantasan korupsi di instansi." style "character_desc"
@@ -779,6 +789,7 @@ screen characters():
                 spacing 20
                 add "gui/about/tianormal.png" at photo_size
                 vbox:
+                    spacing 10
                     text "TIA" style "character_name"
                     text "Istri Arya" style "character_desc"
                     text "Istri yang setia mendampingi Arya. Meski sering khawatir dengan risiko yang dihadapi suaminya, ia tetap mendukung perjuangan Arya melawan korupsi." style "character_desc"
@@ -788,9 +799,21 @@ screen characters():
                 spacing 20
                 add "gui/about/dhiyalnormal.png" at photo_size
                 vbox:
+                    spacing 10
                     text "DHIYAL" style "character_name"
                     text "Teman kerja Arya" style "character_desc"
                     text "Rekan kerja yang memiliki kepedulian tinggi. Sering memberikan peringatan dan nasihat kepada Arya tentang bahaya yang mengintai di lingkungan kerja." style "character_desc"
+            
+            # Tabira
+            hbox:
+                spacing 20
+                add "gui/about/tabiraa.png" at photo_size
+                vbox:
+                    spacing 10
+                    text "TABIRA" style "character_name"
+                    text "Teman Dhiyal" style "character_desc"
+                    text "Tidak ada deskripsi khusus, hanya teman dhiyal" style "character_desc"
+
 
 ## Load and Save screens #######################################################
 ##

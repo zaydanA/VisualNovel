@@ -54,8 +54,21 @@ image bambangmarah:
 image bosbesarnormal:
     "bosbesar normal.png"
     zoom 0.3
+image dhiyaltebak:
+    "dhiyaltebak.png"
+    zoom 0.3
+    xzoom -1.0 
+image dhiyalmarah:
+    "dhiyalmarah.png"
+    zoom 0.3
+    xzoom -1.0 
+image tabiranormal:
+    "tabira.png"
+    zoom 0.3
+    xpos 0.8  # Posisi horizontal 80% dari lebar layar
+    xzoom -1.0 
 image dhiyalcuriga:
-    "dhiyal curiga.png"
+    "dhiyalcuriga.png"
     zoom 0.3
     xzoom -1.0 
 image tiamarah:
@@ -97,6 +110,11 @@ image gubernurnormal:
 image petugaskpknormal:
     "petugaskpk normal.png"
     zoom 0.3
+image ibuaryanormal:
+    "ibuaryasedih.png"
+    zoom 0.4
+    xpos 0.8  # Posisi horizontal 80% dari lebar layar
+    xzoom -1.0 
 # image aryabangga:
 #     "zeil delighted.png"
 #     zoom 1.25
@@ -112,9 +130,6 @@ image petugaskpknormal:
 # image dhiyalnormal:
 #     "dhiyal normal.png"
 #     zoom 1.75
-# image ibuaryanormal:
-#     "ibuarya normal.png"
-#     zoom 1.1 
 # image hendranormal:
 #     "hendra normal.png"
 #     zoom 0.45
@@ -321,7 +336,7 @@ label c3_1:
     $ renpy.pause(1.5)
     hide aryasmile
     show aryanormal at left
-    show dhiyalcuriga at right with easeinright
+    show dhiyaltebak at right with easeinright
     play sound "dialog.mp3"
     dhiyal "Arya! Makanan, makanan apa yang kalau dimakan bikin dosa?"
 
@@ -336,6 +351,8 @@ label c3_1:
         "Makan berdua sama Kartika":
             play sound "dialog.mp3"
 
+    hide dhiyaltebak
+    show dhiyalmarah at right
     dhiyal "Makan berdua sama Mba Kartika lah, kamu kan punya istri, gimana sih!"
 
     hide aryanormal
@@ -343,7 +360,10 @@ label c3_1:
     play sound "dialog.mp3"
     arya "Apaansih Yal, Orang saya mau bahas kerjaan doang, gak ada sangkut pautnya sama istri saya."
 
+    hide dhiyalmarah with easeoutright
     play sound "dialog.mp3"
+    show dhiyalmarah at center with easeinright
+    show tabiranormal with easeinright
     dhiyal "Arya, saya kasih tau ya, pikir dua kali kalau mau apa-apa."
 
     play sound "dialog.mp3"

@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/screens.rpy", line 374: 'style' is not a keyword argument or valid child of the screen statement.
-    style navigation_button is gui_button
-         ^
+File "game/script.rpy", line 363: end of line expected.
+    show dhiyalmarah at center easeinright
+                               ^
 
 Ren'Py Version: Ren'Py 8.3.3.24111502
-Sat Dec 14 14:36:24 2024
+Sat Dec 14 20:21:12 2024
