@@ -21,6 +21,18 @@ style hyperlink_text:
     properties gui.text_properties("hyperlink", accent=True)
     hover_underline True
 
+style about_role_header:
+    size 28
+    color "#00cc99"  # Sesuaikan dengan warna tema game
+    bold True
+    padding (0, 10, 0, 5)  # Tambahkan padding untuk spacing yang lebih baik
+    
+style about_person:
+    size 20
+    text_align 0.5
+    xalign 0.5
+    color "#ffffff"  # Warna teks putih, sesuaikan jika perlu
+
 style gui_text:
     properties gui.text_properties("interface")
 
@@ -573,28 +585,127 @@ style return_button:
 ## example of how to make a custom screen.
 
 screen about():
-
     tag menu
-
-    ## This use statement includes the game_menu screen inside this one. The
-    ## vbox child is then included inside the viewport inside the game_menu
-    ## screen.
     use game_menu(_("About"), scroll="viewport"):
-
         style_prefix "about"
-
         vbox:
-
             label "[config.name!t]"
             text _("Version [config.version!t]\n")
 
-            ## gui.about is usually set in options.rpy.
-            if gui.about:
-                text "[gui.about!t]\n"
+            # Project Manager Section
+            text "Project Manager:" style "about_role_header"
+            hbox:
+                spacing 20
+                vbox:
+                    add "gui/about/rafi.png" zoom 0.2
+                    text "Muhammad Rafi Dhiyaulhaq\n18222069 - STEI-K" style "about_person"
 
-            text _("Made with {a=https://www.renpy.org/}Ren'Py{/a} [renpy.version_only].\n\n[renpy.license!t]")
+            # Game Designer Section    
+            text "\nGame Designer:" style "about_role_header"
+            hbox:
+                spacing 20
+                vbox:
+                    add "gui/about/nadela.png" zoom 0.2
+                    text "Nadela Hutami & Santika Az Zahra\n17323007 - FSRD (PJ)" style "about_person"
+                vbox:
+                    add "gui/about/fadhil.png" zoom 0.2
+                    text "Fadhil Fatih Shiddiq\n10222059 - FMIPA" style "about_person"
+            hbox:
+                spacing 20
+                vbox:
+                    add "gui/about/dzakwaan.png" zoom 0.2
+                    text "Ahmad Dzakwaan H.H.\n13622027 - FTMD" style "about_person"
+                vbox:
+                    add "gui/about/raihan.png" zoom 0.2
+                    text "Raihan Rizky N.A.\n13622045 - FTMD" style "about_person"
 
+            # Script Writer Section
+            text "\nScript Writer/Story Developer:" style "about_role_header"
+            hbox:
+                spacing 20
+                vbox:
+                    add "gui/about/akira.png" zoom 0.2
+                    text "Akira Alifia Sihaam\n17223016 - FSRD (PJ)" style "about_person"
+                vbox:
+                    add "gui/about/thahira.png" zoom 0.2
+                    text "Thahira Athayalla G.\n17323023 - FSRD" style "about_person"
+                vbox:
+                    add "gui/about/jihan.png" zoom 0.2
+                    text "Jihan Prihatini\n10222120 - FSRD" style "about_person"
 
+            # Programmer Section
+            text "\nProgrammer:" style "about_role_header"
+            hbox:
+                spacing 20
+                vbox:
+                    add "gui/about/zaydan.png" zoom 0.2
+                    text "Muhammad Zaydan A\n13521104 - STEI-K (PJ)" style "about_person"
+                vbox:
+                    add "gui/about/rafi.png" zoom 0.2
+                    text "Muhammad Rafi Dhiyaulhaq\n18222069 - STEI-K" style "about_person"
+
+            # Graphic Designer Section
+            text "\nGraphic Designer/Illustrator:" style "about_role_header"
+            hbox:
+                spacing 20
+                vbox:
+                    add "gui/about/nadela.png" zoom 0.2
+                    text "Nadela Hutami & Santika Az Zahra\n17323007 - FSRD (PJ)" style "about_person"
+                vbox:
+                    add "gui/about/aceline.png" zoom 0.2
+                    text "Aceline Ardiwinata Putri\n17223031 - FSRD" style "about_person"
+            hbox:
+                spacing 20
+                vbox:
+                    add "gui/about/widya.png" zoom 0.2
+                    text "Widya Kamilatunnisa\n17323035 - FSRD" style "about_person"
+                vbox:
+                    add "gui/about/azahra.png" zoom 0.2
+                    text "Azahra Layla Haqira\n17323053 - FSRD" style "about_person"
+                vbox:
+                    add "gui/about/jasmine.png" zoom 0.2
+                    text "Jasmine Audrey Muljono\n17323046 - FSRD" style "about_person"
+
+            # UI/UX Designer Section
+            text "\nUI/UX Designer:" style "about_role_header"
+            hbox:
+                spacing 20
+                vbox:
+                    add "gui/about/rafi.png" zoom 0.2
+                    text "Muhammad Rafi Dhiyaulhaq\n18222069 - STEI-K (PJ)" style "about_person"
+                vbox:
+                    add "gui/about/aceline.png" zoom 0.2
+                    text "Aceline Ardiwinata Putri\n17223031 - FSRD" style "about_person"
+
+            # Sound Designer Section
+            text "\nSound Designer/Composer:" style "about_role_header"
+            hbox:
+                spacing 20
+                vbox:
+                    add "gui/about/krisnaputra.png" zoom 0.2
+                    text "Krisnaputra\n15421106 - SAPPK (PJ)" style "about_person"
+
+            # QA Tester Section
+            text "\nQuality Assurance (QA) Tester:" style "about_role_header"
+            hbox:
+                spacing 20
+                vbox:
+                    add "gui/about/rafi.png" zoom 0.2
+                    text "Muhammad Rafi Dhiyaulhaq\n18222069 - STEI-K (PJ)" style "about_person"
+                vbox:
+                    add "gui/about/zaydan.png" zoom 0.2
+                    text "Muhammad Zaydan A\n13521104 - STEI-K" style "about_person"
+
+            # Publication Section
+            text "\nPublication Specialist:" style "about_role_header"
+            hbox:
+                spacing 20
+                vbox:
+                    add "gui/about/arfa.png" zoom 0.2
+                    text "Arfa Nasyahla & Azahra Layla Haqira\n17323033 - FSRD (PJ)" style "about_person"
+
+            text "\n\nMade with {a=https://www.renpy.org/}Ren'Py{/a} [renpy.version_only].\n\n[renpy.license!t]"
+            
 style about_label is gui_label
 style about_label_text is gui_label_text
 style about_text is gui_text

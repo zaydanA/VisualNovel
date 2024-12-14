@@ -30,6 +30,46 @@ define config.version = "1.0"
 ## triple-quotes, and leave a blank line between paragraphs.
 
 define gui.about = _p("""
+Project Team:
+
+- Project Manager:
+ Muhammad Rafi Dhiyaulhaq & 18222069 - STEI-K 
+
+- Game Designer:
+ • Nadela Hutami & 17323007 - FSRD & Santika Az Zahra & 17223013 - FSRD (PJ)
+ • Fadhil Fatih Shiddiq & 10222059 - FMIPA
+ • Ahmad Dzakwaan Haniif Herefa & 13622027 - FTMD
+ • Raihan Rizky Nur Abdurrafi & 13622045 - FTMD
+
+- Script Writer/Story Developer:
+ • Akira Alifia Sihaam & 17223016 - FSRD - (PJ)
+ • Thahira Athayalla Ghassani & 17323023 - FSRD
+ • Jihan Prihatini & 10222120 - FSRD
+
+- Programmer:
+ • Muhammad Zaydan A & 13521104 - STEI-K (PJ)
+ • Muhammad Rafi Dhiyaulhaq & 18222069 - STEI-K
+
+- Graphic Designer/Illustrator:
+ • Nadela Hutami & 17323007 - FSRS & Santika Az Zahra & 17223013 - FSRD (PJ)
+ • Aceline Ardiwinata Putri & 17223031 - FSRD
+ • Widya Kamilatunnisa & 17323035 - FSRD
+ • Azahra Layla Haqira & 17323053 - FSRD
+ • Jasmine Audrey Muljono & 17323046 - FSRD
+
+- UI/UX Designer:
+ • Muhammad Rafi Dhiyaulhaq & 18222069 - STEI-K - (PJ)
+ • Aceline Ardiwinata Putri & 17223031 - FSRD
+
+- Sound Designer/Composer:
+ • Krisnaputra & 15421106 - SAPPK (PJ)
+
+- Quality Assurance (QA) Tester:
+ • Muhammad Rafi Dhiyaulhaq & 18222069 - STEI-K (PJ)
+ • Muhammad Zaydan A & 13521104 - STEI-K
+
+- Publication Specialist:
+ • Arfa Nasyahla 17323033 - FSRD & Azahra Layla Haqira - 17323053 - FSRD (PJ)
 """)
 
 
@@ -159,41 +199,41 @@ define config.window_icon = "gui/window_icon.png"
 
 init python:
 
-    ## The following functions take file patterns. File patterns are case-
-    ## insensitive, and matched against the path relative to the base directory,
-    ## with and without a leading /. If multiple patterns match, the first is
-    ## used.
-    ##
-    ## In a pattern:
-    ##
-    ## / is the directory separator.
-    ##
-    ## * matches all characters, except the directory separator.
-    ##
-    ## ** matches all characters, including the directory separator.
-    ##
-    ## For example, "*.txt" matches txt files in the base directory, "game/
-    ## **.ogg" matches ogg files in the game directory or any of its
-    ## subdirectories, and "**.psd" matches psd files anywhere in the project.
+   ## The following functions take file patterns. File patterns are case-
+   ## insensitive, and matched against the path relative to the base directory,
+   ## with and without a leading /. If multiple patterns match, the first is
+   ## used.
+   ##
+   ## In a pattern:
+   ##
+   ## / is the directory separator.
+   ##
+   ## * matches all characters, except the directory separator.
+   ##
+   ## ** matches all characters, including the directory separator.
+   ##
+   ## For example, "*.txt" matches txt files in the base directory, "game/
+   ## **.ogg" matches ogg files in the game directory or any of its
+   ## subdirectories, and "**.psd" matches psd files anywhere in the project.
 
-    ## Classify files as None to exclude them from the built distributions.
+   ## Classify files as None to exclude them from the built distributions.
 
-    build.classify('**~', None)
-    build.classify('**.bak', None)
-    build.classify('**/.**', None)
-    build.classify('**/#**', None)
-    build.classify('**/thumbs.db', None)
+   build.classify('**~', None)
+   build.classify('**.bak', None)
+   build.classify('**/.**', None)
+   build.classify('**/#**', None)
+   build.classify('**/thumbs.db', None)
 
-    ## To archive files, classify them as 'archive'.
+   ## To archive files, classify them as 'archive'.
 
-    # build.classify('game/**.png', 'archive')
-    # build.classify('game/**.jpg', 'archive')
+   # build.classify('game/**.png', 'archive')
+   # build.classify('game/**.jpg', 'archive')
 
-    ## Files matching documentation patterns are duplicated in a mac app build,
-    ## so they appear in both the app and the zip file.
+   ## Files matching documentation patterns are duplicated in a mac app build,
+   ## so they appear in both the app and the zip file.
 
-    build.documentation('*.html')
-    build.documentation('*.txt')
+   build.documentation('*.html')
+   build.documentation('*.txt')
 
 
 ## A Google Play license key is required to perform in-app purchases. It can be
