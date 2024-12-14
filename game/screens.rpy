@@ -37,6 +37,16 @@ style about_person:
     text_align 0.5
     xalign 0.5
 
+style character_name:
+    size 24
+    color "#00cc99"
+    bold True
+    padding (0, 10, 0, 5)
+
+style character_desc:
+    size 20
+    line_spacing 5
+
 style gui_text:
     properties gui.text_properties("interface")
 
@@ -302,73 +312,64 @@ style quick_button_text:
 ## to other menus, and to start the game.
 
 screen navigation():
-
     vbox:
         style_prefix "navigation"
-
         xpos gui.navigation_xpos
         yalign 0.5
-
         spacing gui.navigation_spacing
 
         if main_menu:
-
-            # textbutton _("Start") action Start()
             imagebutton:
-                idle "gui/buttonstart_idle2.png"  # The default image
-                # hover "gui/buttonstart_hover.png"  # Image when hovered
-                action Start()  # The action to take when clicked
+                idle "gui/buttonstart_idle2.png"
+                action Start()
         else:
             textbutton _("Restart") action Start()
             textbutton _("History") action ShowMenu("history")
-
             textbutton _("Save") action ShowMenu("save")
-
 
         if main_menu:
             imagebutton:
-                idle "gui/button_load.png"  # The default image
-                # hover "gui/buttonstart_hover.png"  # Image when hovered
+                idle "gui/button_load.png"
                 action ShowMenu("load")
         else:
             textbutton _("Load") action ShowMenu("load")
 
+        # Tambahkan tombol Characters di sini
+        if main_menu:
+            imagebutton:
+                idle "gui/button_characters.png"  # Buat gambar button untuk characters
+                action ShowMenu("characters")
+        else:
+            textbutton _("Characters") action ShowMenu("characters")
 
         if main_menu:
-
             imagebutton:
-                idle "gui/button_options2.png"  # The default image
-                # hover "gui/buttonstart_hover.png"  # Image when hovered
-                # action ShowMenu("load")
+                idle "gui/button_options2.png"
                 action ShowMenu("options")
         else:
             textbutton _("Options") action ShowMenu("options")
-
 
         if _in_replay:
             textbutton _("End Replay") action EndReplay(confirm=True)
 
         elif not main_menu:
-
             textbutton _("Main Menu") action MainMenu()
-        
-        
+
         if main_menu:
             imagebutton:
-                idle "gui/button_about2.png"  # The default image
+                idle "gui/button_about2.png"
                 action ShowMenu("about")
         else:
             textbutton _("About") action ShowMenu("about")
-        
 
         if renpy.variant("pc") or (renpy.variant("web") and not renpy.variant("mobile")):
             if main_menu:
-                ## Help isn't necessary or relevant to mobile devices.
                 imagebutton:
-                    idle "gui/button_help2.png"  # The default image
+                    idle "gui/button_help2.png"
                     action ShowMenu("help")
             else:
-                textbutton _("Help") action ShowMenu("help")                
+                textbutton _("Help") action ShowMenu("help")
+                        
         # if renpy.variant("pc"):
 
         #     ## The quit button is banned on iOS and unnecessary on Android and
@@ -724,8 +725,6 @@ screen about():
                     add "gui/about/Lala.png" at photo_size
                     text "Azahra Layla Haqira\n17323053 - FSRD (PJ)" style "about_person"
 
-            text "\n\nMade with {a=https://www.renpy.org/}Ren'Py{/a} [renpy.version_only].\n\n[renpy.license!t]"
-
 style about_label is gui_label
 style about_label_text is gui_label_text
 style about_text is gui_text
@@ -733,6 +732,78 @@ style about_text is gui_text
 style about_label_text:
     size gui.label_text_size
 
+
+screen characters():
+    tag menu
+    use game_menu(_("Characters"), scroll="viewport"):
+        style_prefix "about"
+        vbox:
+            spacing 30
+            
+            text "Main Characters" style "about_role_header"
+            
+            # Arya
+            hbox:
+                spacing 20
+                add "gui/about/aryanormal.png" at photo_size
+                vbox:
+                    text "ARYA WICAKSANA (27)" style 24 color "#00cc99"
+                    text "Pegawai negeri muda idealis, lulusan terbaik IPDN."
+                    text "Seorang pegawai negeri yang berpegang teguh pada integritas dan idealisme. Sebagai lulusan terbaik IPDN, ia memiliki tekad kuat untuk membawa perubahan dalam sistem birokrasi."
+            
+            # Maya
+            hbox:
+                spacing 20
+                add "gui/about/mayanormal.png" at photo_size
+                vbox:
+                    text "MAYA PERTIWI (26)" style 24 color "#00cc99"
+                    text "Jurnalis investigasi yang kritis terhadap pemerintahan."
+                    text "Jurnalis berani yang selalu mengejar kebenaran. Memiliki jaringan luas dan kemampuan investigasi yang tajam dalam mengungkap kasus-kasus korupsi."
+            
+            # Bambang
+            hbox:
+                spacing 20
+                add "gui/about/bambangnormal.png" at photo_size
+                vbox:
+                    text "BAMBANG SUDIARTO (55)" style 24 color "#00cc99"
+                    text "Mentor Arya, pejabat senior yang berintegritas."
+                    text "Pejabat senior yang menjadi panutan bagi Arya. Sosok yang tegas namun bijaksana dalam membimbing pegawai muda menuju birokrasi yang bersih."
+            
+            # Kartika
+            hbox:
+                spacing 20
+                add "gui/about/kartikanormal.png" at photo_size
+                vbox:
+                    text "KARTIKA DEWI (32)" style 24 color "#00cc99"
+                    text "Pengusaha cantik yang sering berurusan dengan tender pemerintah."
+                    text "Pengusaha sukses yang memiliki hubungan dekat dengan banyak pejabat. Kecantikan dan kecerdasannya sering digunakan untuk melancarkan kepentingan bisnisnya."
+            
+            # Hendra
+            hbox:
+                spacing 20
+                add "gui/about/hendranormal.png" at photo_size
+                vbox:
+                    text "HENDRA PRIBADI (45)" style 24 color "#00cc99"
+                    text "Pejabat korup yang menjadi antagonis utama."
+                    text "Pejabat senior yang lihai dalam permainan tender dan suap-menyuap. Menjadi penghalang utama bagi upaya pemberantasan korupsi di instansi."
+            
+            # Tia
+            hbox:
+                spacing 20
+                add "gui/about/tianormal.png" at photo_size
+                vbox:
+                    text "TIA" style 24 color "#00cc99"
+                    text "Istri Arya"
+                    text "Istri yang setia mendampingi Arya. Meski sering khawatir dengan risiko yang dihadapi suaminya, ia tetap mendukung perjuangan Arya melawan korupsi."
+            
+            # Dhiyal
+            hbox:
+                spacing 20
+                add "gui/about/dhiyalnormal.png" at photo_size
+                vbox:
+                    text "DHIYAL" style 24 color "#00cc99"
+                    text "Teman kerja Arya"
+                    text "Rekan kerja yang memiliki kepedulian tinggi. Sering memberikan peringatan dan nasihat kepada Arya tentang bahaya yang mengintai di lingkungan kerja."
 
 ## Load and Save screens #######################################################
 ##

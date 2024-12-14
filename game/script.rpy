@@ -120,8 +120,6 @@ image petugaskpknormal:
 #     "hendra normal.png"
 #     zoom 0.45
 
-
-
 image pegawai1normal:
     "pegawai1 normal.png"
     zoom 1.5
