@@ -611,7 +611,8 @@ screen about():
             hbox:
                 spacing 20 
                 vbox style "about_image_container":
-                    add "gui/about/rafi.png" style "about_photo"
+                    add "gui/about/rafi.png":
+                        style "about_photo"
                     text "Muhammad Rafi Dhiyaulhaq\n18222069 - STEI-K" style "about_person"
 
             # Game Designer Section    
@@ -619,16 +620,20 @@ screen about():
             hbox:
                 spacing 20
                 vbox style "about_image_container":
-                    add "gui/about/nadela.png" style "about_photo"
+                    add "gui/about/nadela.png":
+                        style "about_photo"
                     text "Nadela Hutami & Santika Az Zahra\n17323007 - FSRD (PJ)" style "about_person"
                 vbox style "about_image_container":
-                    add "gui/about/fadhil.png" style "about_photo"
+                    add "gui/about/fadhil.png":
+                        style "about_photo"
                     text "Fadhil Fatih Shiddiq\n10222059 - FMIPA" style "about_person"
                 vbox style "about_image_container":
-                    add "gui/about/dzakwaan.png" style "about_photo"
+                    add "gui/about/dzakwaan.png":
+                        style "about_photo"
                     text "Ahmad Dzakwaan H.H.\n13622027 - FTMD" style "about_person"
                 vbox style "about_image_container":
-                    add "gui/about/raihan.png" style "about_photo"
+                    add "gui/about/raihan.png":
+                        style "about_photo"
                     text "Raihan Rizky N.A.\n13622045 - FTMD" style "about_person"
 
             # Script Writer Section
@@ -636,13 +641,16 @@ screen about():
             hbox:
                 spacing 20
                 vbox style "about_image_container":
-                    add "gui/about/akira.png" style "about_photo"
+                    add "gui/about/akira.png":
+                        style "about_photo"
                     text "Akira Alifia Sihaam\n17223016 - FSRD (PJ)" style "about_person"
                 vbox style "about_image_container":
-                    add "gui/about/thahira.png" style "about_photo"
+                    add "gui/about/thahira.png":
+                        style "about_photo"
                     text "Thahira Athayalla G.\n17323023 - FSRD" style "about_person"
                 vbox style "about_image_container":
-                    add "gui/about/jihan.png" style "about_photo"
+                    add "gui/about/jihan.png":
+                        style "about_photo"
                     text "Jihan Prihatini\n10222120 - FSRD" style "about_person"
 
             # Programmer Section
@@ -650,10 +658,12 @@ screen about():
             hbox:
                 spacing 20
                 vbox style "about_image_container":
-                    add "gui/about/zaydan.png" style "about_photo"
+                    add "gui/about/zaydan.png":
+                        style "about_photo"
                     text "Muhammad Zaydan A\n13521104 - STEI-K (PJ)" style "about_person"
                 vbox style "about_image_container":
-                    add "gui/about/rafi.png" style "about_photo"
+                    add "gui/about/rafi.png":
+                        style "about_photo"
                     text "Muhammad Rafi Dhiyaulhaq\n18222069 - STEI-K" style "about_person"
 
             # Graphic Designer Section
@@ -661,21 +671,26 @@ screen about():
             hbox:
                 spacing 20
                 vbox style "about_image_container":
-                    add "gui/about/nadela.png" style "about_photo"
+                    add "gui/about/nadela.png":
+                        style "about_photo"
                     text "Nadela Hutami & Santika Az Zahra\n17323007 - FSRD (PJ)" style "about_person"
                 vbox style "about_image_container":
-                    add "gui/about/aceline.png" style "about_photo"
+                    add "gui/about/aceline.png":
+                        style "about_photo"
                     text "Aceline Ardiwinata Putri\n17223031 - FSRD" style "about_person"
             hbox:
                 spacing 20
                 vbox style "about_image_container":
-                    add "gui/about/widya.png" style "about_photo"
+                    add "gui/about/widya.png":
+                        style "about_photo"
                     text "Widya Kamilatunnisa\n17323035 - FSRD" style "about_person"
                 vbox style "about_image_container":
-                    add "gui/about/azahra.png" style "about_photo"
+                    add "gui/about/azahra.png":
+                        style "about_photo"
                     text "Azahra Layla Haqira\n17323053 - FSRD" style "about_person"
                 vbox style "about_image_container":
-                    add "gui/about/jasmine.png" style "about_photo"
+                    add "gui/about/jasmine.png":
+                        style "about_photo"
                     text "Jasmine Audrey Muljono\n17323046 - FSRD" style "about_person"
 
             # UI/UX Designer Section
@@ -683,10 +698,12 @@ screen about():
             hbox:
                 spacing 20
                 vbox style "about_image_container":
-                    add "gui/about/rafi.png" style "about_photo"
+                    add "gui/about/rafi.png":
+                        style "about_photo"
                     text "Muhammad Rafi Dhiyaulhaq\n18222069 - STEI-K (PJ)" style "about_person"
                 vbox style "about_image_container":
-                    add "gui/about/aceline.png" style "about_photo"
+                    add "gui/about/aceline.png":
+                        style "about_photo"
                     text "Aceline Ardiwinata Putri\n17223031 - FSRD" style "about_person"
 
             # Sound Designer Section
@@ -694,7 +711,8 @@ screen about():
             hbox:
                 spacing 20
                 vbox style "about_image_container":
-                    add "gui/about/krisnaputra.png" style "about_photo"
+                    add "gui/about/krisnaputra.png":
+                        style "about_photo"
                     text "Krisnaputra\n15421106 - SAPPK (PJ)" style "about_person"
 
             # QA Tester Section
@@ -702,10 +720,12 @@ screen about():
             hbox:
                 spacing 20
                 vbox style "about_image_container":
-                    add "gui/about/rafi.png" style "about_photo"
+                    add "gui/about/rafi.png":
+                        style "about_photo"
                     text "Muhammad Rafi Dhiyaulhaq\n18222069 - STEI-K (PJ)" style "about_person"
                 vbox style "about_image_container":
-                    add "gui/about/zaydan.png" style "about_photo"
+                    add "gui/about/zaydan.png":
+                        style "about_photo"
                     text "Muhammad Zaydan A\n13521104 - STEI-K" style "about_person"
 
             # Publication Section
@@ -713,7 +733,8 @@ screen about():
             hbox:
                 spacing 20
                 vbox style "about_image_container":
-                    add "gui/about/arfa.png" style "about_photo"
+                    add "gui/about/arfa.png":
+                        style "about_photo"
                     text "Arfa Nasyahla & Azahra Layla Haqira\n17323033 - FSRD (PJ)" style "about_person"
 
             text "\n\nMade with {a=https://www.renpy.org/}Ren'Py{/a} [renpy.version_only].\n\n[renpy.license!t]"

@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 146: Line is indented, but the preceding show screen statement statement does not expect a block. Please check this line's indentation. You may have forgotten a colon (:).
-    scene bg depankantor
-    ^
+File "game/screens.rpy", line 614: 'style' is not a keyword argument or valid child of the add statement.
+    add "gui/about/rafi.png" style "about_photo"
+                                  ^
 
-Ren'Py Version: Ren'Py 8.3.2.24090902
-Wed Dec 11 17:51:30 2024
+Ren'Py Version: Ren'Py 8.3.3.24111502
+Sat Dec 14 13:33:24 2024
