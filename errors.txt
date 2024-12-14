@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/screens.rpy", line 614: 'style' is not a keyword argument or valid child of the add statement.
-    add "gui/about/rafi.png" style "about_photo"
-                                  ^
+File "game/screens.rpy", line 615: 'style' is not a keyword argument or valid child of the add statement.
+    style "about_photo"
+         ^
 
 Ren'Py Version: Ren'Py 8.3.3.24111502
-Sat Dec 14 13:33:24 2024
+Sat Dec 14 13:36:43 2024
