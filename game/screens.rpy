@@ -329,49 +329,33 @@ screen navigation():
         style_prefix "navigation"
         xpos gui.navigation_xpos
         yalign 0.5
-        spacing 4
+        spacing 15  # Sesuaikan spacing untuk jarak antar button
 
         if main_menu:
             imagebutton:
                 idle "gui/buttonstart_idle2.png"
-                xpos -20  # Geser sedikit ke kiri
-                ypos 0    # Reset posisi vertikal
                 action Start()
-                xsize 250
-                ysize 60
 
             imagebutton:
                 idle "gui/button_load.png"
-                xpos -20
-                ypos 10   
-                action ShowMenu("load") 
-                xsize 250
-                ysize 60
+                action ShowMenu("load")
+
+            imagebutton:
+                idle "gui/button_characters.png"  # Tambahan button characters
+                action ShowMenu("characters")
 
             imagebutton:
                 idle "gui/button_options2.png"
-                xpos -20
-                ypos 20
                 action ShowMenu("options")
-                xsize 250
-                ysize 60
 
             imagebutton:
                 idle "gui/button_about2.png"
-                xpos -20
-                ypos 30
                 action ShowMenu("about")
-                xsize 250
-                ysize 60
 
             if renpy.variant("pc"):
                 imagebutton:
                     idle "gui/button_help2.png"
-                    xpos -20
-                    ypos 40
                     action ShowMenu("help")
-                    xsize 250
-                    ysize 60
 
         else:
             textbutton _("Restart") action Start()
@@ -696,7 +680,7 @@ screen about():
                     text "Aceline Ardiwinata Putri\n17223031 - FSRD" style "about_person"
                 vbox style "about_image_container":
                     add "gui/about/zaydan.png" at photo_size
-                    text "Muhammad Zaydan A\n13521104 - STEI-Kg" style "about_person"
+                    text "Muhammad Zaydan A\n13521104 - STEI-K" style "about_person"
 
             # Sound Designer Section
             text "Sound Designer/Composer:" style "about_role_header"
