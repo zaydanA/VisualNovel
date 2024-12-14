@@ -1,22 +1,57 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
-While running game code:
-  File "renpy/common/00gamemenu.rpy", line 177, in script
-    jump expression _game_menu_screen
-ScriptError: could not find label 'Preferences_screen'.
+While loading <renpy.display.im.Image object ('gui/button_characters.png') at 0x107696d00>:
+AttributeError: 'int' object has no attribute 'partition'
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "renpy/common/00gamemenu.rpy", line 177, in script
-    jump expression _game_menu_screen
-  File "C:\Users\ASUS\Downloads\Programs\renpy-8.3.2-sdk\renpy\ast.py", line 1699, in execute
-    rv = renpy.game.script.lookup(target)
-  File "C:\Users\ASUS\Downloads\Programs\renpy-8.3.2-sdk\renpy\script.py", line 1103, in lookup
-    raise ScriptError("could not find label '%s'." % str(original))
-ScriptError: could not find label 'Preferences_screen'.
+  File "renpy/common/_layout/screen_main_menu.rpym", line 28, in script
+    python hide:
+  File "/Users/rafidhiyaulhaq/Desktop/renpy-8.3.3-sdk/renpy/ast.py", line 821, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "/Users/rafidhiyaulhaq/Desktop/renpy-8.3.3-sdk/renpy/python.py", line 1178, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+  File "renpy/common/_layout/screen_main_menu.rpym", line 28, in <module>
+    python hide:
+  File "renpy/common/_layout/screen_main_menu.rpym", line 35, in _execute_python_hide
+    ui.interact()
+  File "/Users/rafidhiyaulhaq/Desktop/renpy-8.3.3-sdk/renpy/ui.py", line 301, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "/Users/rafidhiyaulhaq/Desktop/renpy-8.3.3-sdk/renpy/display/core.py", line 2215, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
+  File "/Users/rafidhiyaulhaq/Desktop/renpy-8.3.3-sdk/renpy/display/core.py", line 2745, in interact_core
+    root_widget.visit_all(lambda d : d.per_interact())
+  File "/Users/rafidhiyaulhaq/Desktop/renpy-8.3.3-sdk/renpy/display/displayable.py", line 434, in visit_all
+    d.visit_all(callback, seen)
+  File "/Users/rafidhiyaulhaq/Desktop/renpy-8.3.3-sdk/renpy/display/displayable.py", line 434, in visit_all
+    d.visit_all(callback, seen)
+  File "/Users/rafidhiyaulhaq/Desktop/renpy-8.3.3-sdk/renpy/display/displayable.py", line 434, in visit_all
+    d.visit_all(callback, seen)
+  [Previous line repeated 1 more time]
+  File "/Users/rafidhiyaulhaq/Desktop/renpy-8.3.3-sdk/renpy/display/screen.py", line 485, in visit_all
+    self.child.visit_all(callback, seen=None)
+  File "/Users/rafidhiyaulhaq/Desktop/renpy-8.3.3-sdk/renpy/display/displayable.py", line 434, in visit_all
+    d.visit_all(callback, seen)
+  File "/Users/rafidhiyaulhaq/Desktop/renpy-8.3.3-sdk/renpy/display/displayable.py", line 434, in visit_all
+    d.visit_all(callback, seen)
+  File "/Users/rafidhiyaulhaq/Desktop/renpy-8.3.3-sdk/renpy/display/displayable.py", line 434, in visit_all
+    d.visit_all(callback, seen)
+  [Previous line repeated 7 more times]
+  File "/Users/rafidhiyaulhaq/Desktop/renpy-8.3.3-sdk/renpy/display/displayable.py", line 436, in visit_all
+    callback(self)
+  File "/Users/rafidhiyaulhaq/Desktop/renpy-8.3.3-sdk/renpy/display/core.py", line 2745, in <lambda>
+    root_widget.visit_all(lambda d : d.per_interact())
+  File "/Users/rafidhiyaulhaq/Desktop/renpy-8.3.3-sdk/renpy/text/text.py", line 2225, in per_interact
+    if self.style.slow_abortable:
+  File "gen3-static/styleclass.pxi", line 613, in renpy.styledata.styleclass.Style.slow_abortable.__get__
+  File "style.pyx", line 493, in renpy.style.StyleCore._get
+  File "style.pyx", line 686, in renpy.style.build_style
+  File "style.pyx", line 142, in renpy.style.get_full_style
+  File "style.pyx", line 80, in renpy.style.get_style
+AttributeError: 'int' object has no attribute 'partition'
 
-Windows-10-10.0.22631 AMD64
-Ren'Py 8.3.2.24090902
+macOS-15.1.1-arm64-arm-64bit arm64
+Ren'Py 8.3.3.24111502
 KWN 1.0
-Wed Dec 11 17:55:55 2024
+Sat Dec 14 14:17:45 2024
