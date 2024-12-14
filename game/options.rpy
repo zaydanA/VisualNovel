@@ -60,6 +60,8 @@ Project Team:
 - UI/UX Designer:
  • Muhammad Rafi Dhiyaulhaq & 18222069 - STEI-K - (PJ)
  • Aceline Ardiwinata Putri & 17223031 - FSRD
+ • Muhammad Zaydan A & 13521104 - STEI-K
+
 
 - Sound Designer/Composer:
  • Krisnaputra & 15421106 - SAPPK (PJ)
