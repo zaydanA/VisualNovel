@@ -57,6 +57,7 @@ image bosbesarnormal:
 image dhiyalcuriga:
     "dhiyal curiga.png"
     zoom 0.3
+    xzoom -1.0 
 image tiamarah:
     "tia marah.png"
     zoom 0.3
