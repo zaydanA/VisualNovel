@@ -619,7 +619,10 @@ screen about():
                 spacing 20
                 vbox style "about_image_container":
                     add "gui/about/nadela.png" at photo_size
-                    text "Nadela Hutami & Santika Az Zahra\n17323007 - FSRD (PJ)" style "about_person"
+                    text "Nadela Hutami\n17323007 - FSRD (PJ)" style "about_person"
+                vbox style "about_image_container":
+                    add "gui/about/Santika.png" at photo_size
+                    text "Santika Az Zahra\n17223013 - FSRD (PJ)" style "about_person"
                 vbox style "about_image_container":
                     add "gui/about/fadhil.png" at photo_size
                     text "Fadhil Fatih Shiddiq\n10222059 - FMIPA" style "about_person"
@@ -661,7 +664,10 @@ screen about():
                 spacing 20
                 vbox style "about_image_container":
                     add "gui/about/nadela.png" at photo_size
-                    text "Nadela Hutami & Santika Az Zahra\n17323007 - FSRD (PJ)" style "about_person"
+                    text "Nadela Hutami\n17323007 - FSRD (PJ)" style "about_person"
+                vbox style "about_image_container":
+                    add "gui/about/Santika.png" at photo_size
+                    text "Santika Az Zahra\n17223013 - FSRD (PJ)" style "about_person"
                 vbox style "about_image_container":
                     add "gui/about/aceline.png" at photo_size
                     text "Aceline Ardiwinata Putri\n17223031 - FSRD" style "about_person"
@@ -714,6 +720,9 @@ screen about():
                 vbox style "about_image_container":
                     add "gui/about/arfa.png" at photo_size
                     text "Arfa Nasyahla & Azahra Layla Haqira\n17323033 - FSRD (PJ)" style "about_person"
+                vbox style "about_image_container":
+                    add "gui/about/Lala.png" at photo_size
+                    text "Azahra Layla Haqira\n17323053 - FSRD (PJ)" style "about_person"
 
             text "\n\nMade with {a=https://www.renpy.org/}Ren'Py{/a} [renpy.version_only].\n\n[renpy.license!t]"
 
