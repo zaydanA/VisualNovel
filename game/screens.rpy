@@ -23,15 +23,26 @@ style hyperlink_text:
 
 style about_role_header:
     size 28
-    color "#00cc99"  # Sesuaikan dengan warna tema game
+    color "#00cc99"
     bold True
-    padding (0, 10, 0, 5)  # Tambahkan padding untuk spacing yang lebih baik
-    
+    padding (0, 10, 0, 5)
+
+style about_image_container:
+    xsize 200
+    ysize 250
+    xalign 0.5
+
+style about_photo:
+    xsize 180
+    ysize 180
+    xalign 0.5
+    yalign 0.0
+    margin (0, 0, 0, 10)
+
 style about_person:
     size 20
     text_align 0.5
     xalign 0.5
-    color "#ffffff"  # Warna teks putih, sesuaikan jika perlu
 
 style gui_text:
     properties gui.text_properties("interface")
@@ -589,123 +600,124 @@ screen about():
     use game_menu(_("About"), scroll="viewport"):
         style_prefix "about"
         vbox:
+            spacing 30
+
+            # Header
             label "[config.name!t]"
             text _("Version [config.version!t]\n")
 
             # Project Manager Section
             text "Project Manager:" style "about_role_header"
             hbox:
-                spacing 20
-                vbox:
-                    add "gui/about/rafi.png" zoom 0.2
+                spacing 20 
+                vbox style "about_image_container":
+                    add "gui/about/rafi.png" style "about_photo"
                     text "Muhammad Rafi Dhiyaulhaq\n18222069 - STEI-K" style "about_person"
 
             # Game Designer Section    
-            text "\nGame Designer:" style "about_role_header"
+            text "Game Designer:" style "about_role_header"
             hbox:
                 spacing 20
-                vbox:
-                    add "gui/about/nadela.png" zoom 0.2
+                vbox style "about_image_container":
+                    add "gui/about/nadela.png" style "about_photo"
                     text "Nadela Hutami & Santika Az Zahra\n17323007 - FSRD (PJ)" style "about_person"
-                vbox:
-                    add "gui/about/fadhil.png" zoom 0.2
+                vbox style "about_image_container":
+                    add "gui/about/fadhil.png" style "about_photo"
                     text "Fadhil Fatih Shiddiq\n10222059 - FMIPA" style "about_person"
-            hbox:
-                spacing 20
-                vbox:
-                    add "gui/about/dzakwaan.png" zoom 0.2
+                vbox style "about_image_container":
+                    add "gui/about/dzakwaan.png" style "about_photo"
                     text "Ahmad Dzakwaan H.H.\n13622027 - FTMD" style "about_person"
-                vbox:
-                    add "gui/about/raihan.png" zoom 0.2
+                vbox style "about_image_container":
+                    add "gui/about/raihan.png" style "about_photo"
                     text "Raihan Rizky N.A.\n13622045 - FTMD" style "about_person"
 
             # Script Writer Section
-            text "\nScript Writer/Story Developer:" style "about_role_header"
+            text "Script Writer/Story Developer:" style "about_role_header"
             hbox:
                 spacing 20
-                vbox:
-                    add "gui/about/akira.png" zoom 0.2
+                vbox style "about_image_container":
+                    add "gui/about/akira.png" style "about_photo"
                     text "Akira Alifia Sihaam\n17223016 - FSRD (PJ)" style "about_person"
-                vbox:
-                    add "gui/about/thahira.png" zoom 0.2
+                vbox style "about_image_container":
+                    add "gui/about/thahira.png" style "about_photo"
                     text "Thahira Athayalla G.\n17323023 - FSRD" style "about_person"
-                vbox:
-                    add "gui/about/jihan.png" zoom 0.2
+                vbox style "about_image_container":
+                    add "gui/about/jihan.png" style "about_photo"
                     text "Jihan Prihatini\n10222120 - FSRD" style "about_person"
 
             # Programmer Section
-            text "\nProgrammer:" style "about_role_header"
+            text "Programmer:" style "about_role_header"
             hbox:
                 spacing 20
-                vbox:
-                    add "gui/about/zaydan.png" zoom 0.2
+                vbox style "about_image_container":
+                    add "gui/about/zaydan.png" style "about_photo"
                     text "Muhammad Zaydan A\n13521104 - STEI-K (PJ)" style "about_person"
-                vbox:
-                    add "gui/about/rafi.png" zoom 0.2
+                vbox style "about_image_container":
+                    add "gui/about/rafi.png" style "about_photo"
                     text "Muhammad Rafi Dhiyaulhaq\n18222069 - STEI-K" style "about_person"
 
             # Graphic Designer Section
-            text "\nGraphic Designer/Illustrator:" style "about_role_header"
+            text "Graphic Designer/Illustrator:" style "about_role_header"
             hbox:
                 spacing 20
-                vbox:
-                    add "gui/about/nadela.png" zoom 0.2
+                vbox style "about_image_container":
+                    add "gui/about/nadela.png" style "about_photo"
                     text "Nadela Hutami & Santika Az Zahra\n17323007 - FSRD (PJ)" style "about_person"
-                vbox:
-                    add "gui/about/aceline.png" zoom 0.2
+                vbox style "about_image_container":
+                    add "gui/about/aceline.png" style "about_photo"
                     text "Aceline Ardiwinata Putri\n17223031 - FSRD" style "about_person"
             hbox:
                 spacing 20
-                vbox:
-                    add "gui/about/widya.png" zoom 0.2
+                vbox style "about_image_container":
+                    add "gui/about/widya.png" style "about_photo"
                     text "Widya Kamilatunnisa\n17323035 - FSRD" style "about_person"
-                vbox:
-                    add "gui/about/azahra.png" zoom 0.2
+                vbox style "about_image_container":
+                    add "gui/about/azahra.png" style "about_photo"
                     text "Azahra Layla Haqira\n17323053 - FSRD" style "about_person"
-                vbox:
-                    add "gui/about/jasmine.png" zoom 0.2
+                vbox style "about_image_container":
+                    add "gui/about/jasmine.png" style "about_photo"
                     text "Jasmine Audrey Muljono\n17323046 - FSRD" style "about_person"
 
             # UI/UX Designer Section
-            text "\nUI/UX Designer:" style "about_role_header"
+            text "UI/UX Designer:" style "about_role_header"
             hbox:
                 spacing 20
-                vbox:
-                    add "gui/about/rafi.png" zoom 0.2
+                vbox style "about_image_container":
+                    add "gui/about/rafi.png" style "about_photo"
                     text "Muhammad Rafi Dhiyaulhaq\n18222069 - STEI-K (PJ)" style "about_person"
-                vbox:
-                    add "gui/about/aceline.png" zoom 0.2
+                vbox style "about_image_container":
+                    add "gui/about/aceline.png" style "about_photo"
                     text "Aceline Ardiwinata Putri\n17223031 - FSRD" style "about_person"
 
             # Sound Designer Section
-            text "\nSound Designer/Composer:" style "about_role_header"
+            text "Sound Designer/Composer:" style "about_role_header"
             hbox:
                 spacing 20
-                vbox:
-                    add "gui/about/krisnaputra.png" zoom 0.2
+                vbox style "about_image_container":
+                    add "gui/about/krisnaputra.png" style "about_photo"
                     text "Krisnaputra\n15421106 - SAPPK (PJ)" style "about_person"
 
             # QA Tester Section
-            text "\nQuality Assurance (QA) Tester:" style "about_role_header"
+            text "Quality Assurance (QA) Tester:" style "about_role_header"
             hbox:
                 spacing 20
-                vbox:
-                    add "gui/about/rafi.png" zoom 0.2
+                vbox style "about_image_container":
+                    add "gui/about/rafi.png" style "about_photo"
                     text "Muhammad Rafi Dhiyaulhaq\n18222069 - STEI-K (PJ)" style "about_person"
-                vbox:
-                    add "gui/about/zaydan.png" zoom 0.2
+                vbox style "about_image_container":
+                    add "gui/about/zaydan.png" style "about_photo"
                     text "Muhammad Zaydan A\n13521104 - STEI-K" style "about_person"
 
             # Publication Section
-            text "\nPublication Specialist:" style "about_role_header"
+            text "Publication Specialist:" style "about_role_header"
             hbox:
                 spacing 20
-                vbox:
-                    add "gui/about/arfa.png" zoom 0.2
+                vbox style "about_image_container":
+                    add "gui/about/arfa.png" style "about_photo"
                     text "Arfa Nasyahla & Azahra Layla Haqira\n17323033 - FSRD (PJ)" style "about_person"
 
             text "\n\nMade with {a=https://www.renpy.org/}Ren'Py{/a} [renpy.version_only].\n\n[renpy.license!t]"
-            
+
 style about_label is gui_label
 style about_label_text is gui_label_text
 style about_text is gui_text
