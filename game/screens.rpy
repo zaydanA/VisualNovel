@@ -590,7 +590,7 @@ style return_button:
 # Definisikan transform di bagian atas screen
 
 transform photo_size:
-    size (180, 180)
+    size (180, 180) fit "contain"
     xalign 0.5
     yalign 0.0
 
