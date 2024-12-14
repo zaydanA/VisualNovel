@@ -316,8 +316,9 @@ screen navigation():
         style_prefix "navigation"
         xpos gui.navigation_xpos
         yalign 0.5
-        spacing 10
-
+        spacing 4        
+        ypadding 2     
+        yfill False    
         if main_menu:
             imagebutton:
                 idle "gui/buttonstart_idle2.png"
