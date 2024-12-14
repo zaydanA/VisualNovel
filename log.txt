@@ -1,10 +1,10 @@
-2024-12-14 07:29:07 UTC
+2024-12-14 07:30:45 UTC
 macOS-15.1.1-arm64-arm-64bit
 Ren'Py 8.3.3.24111502
 
 Early init took 0.03s
 Loading error handling took 0.02s
-Loading script took 0.17s
+Loading script took 0.10s
 Loading save slot metadata took 0.03s
 Loading persistent took 0.00s
 Running init code took 0.03s
@@ -25,8 +25,8 @@ Build styles took 0.00s
 Load screen analysis took 0.00s
 Analyze screens took 0.01s
 Save screen analysis took 0.01s
-Prepare screens took 0.04s
-Save pyanalysis. took 0.01s
+Prepare screens took 0.03s
+Save pyanalysis. took 0.00s
 Save bytecode. took 0.02s
 Running _start took 0.00s
 Interface start took 0.29s
@@ -40,6 +40,4 @@ Renderer: b'Apple M1'
 Version: b'2.1 Metal - 89.3'
 Display Info: None
 Screen sizes: virtual=(1920, 1080) physical=(1492, 839) drawable=(2984, 1678)
-Maximum texture size: 4096x4096
-Screen sizes: virtual=(1920, 1080) physical=(1492, 869) drawable=(2984, 1738)
 Maximum texture size: 4096x4096
