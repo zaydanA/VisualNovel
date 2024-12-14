@@ -696,7 +696,7 @@ screen about():
                     text "Aceline Ardiwinata Putri\n17223031 - FSRD" style "about_person"
                 vbox style "about_image_container":
                     add "gui/about/zaydan.png" at photo_size
-                    text "Muhammad Zaydan A\n13521104 - STEI-K (PJ)" style "about_person"
+                    text "Muhammad Zaydan A\n13521104 - STEI-K" style "about_person"
 
             # Sound Designer Section
             text "Sound Designer/Composer:" style "about_role_header"
