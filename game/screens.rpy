@@ -316,86 +316,73 @@ screen navigation():
         style_prefix "navigation"
         xpos gui.navigation_xpos
         yalign 0.5
-        spacing 4        
-        ypadding 2     
-        yfill False    
+        spacing 4
+
         if main_menu:
             imagebutton:
                 idle "gui/buttonstart_idle2.png"
                 action Start()
-                ypadding 5
+                xsize 250  
+                ysize 60
+
+            imagebutton:
+                idle "gui/button_load.png"
+                action ShowMenu("load") 
+                xsize 250
+                ysize 60
+
+            imagebutton:
+                idle "gui/button_characters.png"  
+                action ShowMenu("characters")
+                xsize 250
+                ysize 60
+
+            imagebutton:
+                idle "gui/button_options2.png"
+                action ShowMenu("options")
+                xsize 250
+                ysize 60
+
+            imagebutton:
+                idle "gui/button_about2.png"
+                action ShowMenu("about")
+                xsize 250
+                ysize 60
+
+            if renpy.variant("pc") or (renpy.variant("web") and not renpy.variant("mobile")):
+                imagebutton:
+                    idle "gui/button_help2.png"
+                    action ShowMenu("help")
+                    xsize 250
+                    ysize 60
+
         else:
             textbutton _("Restart") action Start()
             textbutton _("History") action ShowMenu("history")
             textbutton _("Save") action ShowMenu("save")
-
-        if main_menu:
-            imagebutton:
-                idle "gui/button_load.png"
-                action ShowMenu("load")
-        else:
             textbutton _("Load") action ShowMenu("load")
-
-        # Tambahkan tombol Characters di sini
-        if main_menu:
-            imagebutton:
-                idle "gui/button_characters.png"  # Buat gambar button untuk characters
-                action ShowMenu("characters")
-                ypadding 5
-        else:
             textbutton _("Characters") action ShowMenu("characters")
-
-        if main_menu:
-            imagebutton:
-                idle "gui/button_options2.png"
-                action ShowMenu("options")
-                ypadding 5
-        else:
             textbutton _("Options") action ShowMenu("options")
-
-        if _in_replay:
-            textbutton _("End Replay") action EndReplay(confirm=True)
-
-        elif not main_menu:
-            textbutton _("Main Menu") action MainMenu()
-
-        if main_menu:
-            imagebutton:
-                idle "gui/button_about2.png"
-                action ShowMenu("about")
-                ypadding 5
-        else:
             textbutton _("About") action ShowMenu("about")
+            textbutton _("Help") action ShowMenu("help")
+            
+            if _in_replay:
+                textbutton _("End Replay") action EndReplay(confirm=True)
+            elif not main_menu:
+                textbutton _("Main Menu") action MainMenu()
 
-        if renpy.variant("pc") or (renpy.variant("web") and not renpy.variant("mobile")):
-            if main_menu:
-                imagebutton:
-                    idle "gui/button_help2.png"
-                    action ShowMenu("help")
-                    ypadding 5
-            else:
-                textbutton _("Help") action ShowMenu("help")
+    style navigation_button is gui_button
+    style navigation_button_text is gui_button_text
 
-        # if renpy.variant("pc"):
-
-        #     ## The quit button is banned on iOS and unnecessary on Android and
-        #     ## Web.
-        #     textbutton _("Quit") action Quit(confirm=not main_menu)
-
-
-style navigation_button is gui_button
-style navigation_button_text is gui_button_text
-
-style navigation_button:
+    style navigation_button:
     size_group "navigation"
     properties gui.button_properties("navigation_button")
-    ypadding 2
     spacing 4
     
-style navigation_vbox:
-    spacing 4 
-
-style navigation_button_text:
+    style navigation_vbox:
+    spacing 4
+    
+    style navigation_button_text:
     properties gui.text_properties("navigation_button")
 
 

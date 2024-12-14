@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/screens.rpy", line 615: 'style' is not a keyword argument or valid child of the add statement.
-    style "about_photo"
-         ^
+File "game/screens.rpy", line 320: 'ypadding' is not a keyword argument or valid child of the vbox statement.
+    ypadding 2     
+            ^
 
 Ren'Py Version: Ren'Py 8.3.3.24111502
-Sat Dec 14 13:36:43 2024
+Sat Dec 14 14:33:33 2024
