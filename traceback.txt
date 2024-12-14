@@ -1,6 +1,6 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
-While loading <renpy.display.im.Image object ('gui/button_characters.png') at 0x107696d00>:
+While running game code:
 AttributeError: 'int' object has no attribute 'partition'
 
 -- Full Traceback ------------------------------------------------------------
@@ -54,4 +54,4 @@ AttributeError: 'int' object has no attribute 'partition'
 macOS-15.1.1-arm64-arm-64bit arm64
 Ren'Py 8.3.3.24111502
 KWN 1.0
-Sat Dec 14 14:17:45 2024
+Sat Dec 14 14:23:27 2024

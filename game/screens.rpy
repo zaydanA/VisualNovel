@@ -369,7 +369,7 @@ screen navigation():
                     action ShowMenu("help")
             else:
                 textbutton _("Help") action ShowMenu("help")
-                        
+
         # if renpy.variant("pc"):
 
         #     ## The quit button is banned on iOS and unnecessary on Android and
@@ -747,63 +747,63 @@ screen characters():
                 spacing 20
                 add "gui/about/aryanormal.png" at photo_size
                 vbox:
-                    text "ARYA WICAKSANA (27)" style 24 color "#00cc99"
-                    text "Pegawai negeri muda idealis, lulusan terbaik IPDN."
-                    text "Seorang pegawai negeri yang berpegang teguh pada integritas dan idealisme. Sebagai lulusan terbaik IPDN, ia memiliki tekad kuat untuk membawa perubahan dalam sistem birokrasi."
+                    text "ARYA WICAKSANA (27)" style "character_name"
+                    text "Pegawai negeri muda idealis, lulusan terbaik IPDN." style "character_desc"
+                    text "Seorang pegawai negeri yang berpegang teguh pada integritas dan idealisme. Sebagai lulusan terbaik IPDN, ia memiliki tekad kuat untuk membawa perubahan dalam sistem birokrasi." style "character_desc"
             
             # Maya
             hbox:
                 spacing 20
                 add "gui/about/mayanormal.png" at photo_size
                 vbox:
-                    text "MAYA PERTIWI (26)" style 24 color "#00cc99"
-                    text "Jurnalis investigasi yang kritis terhadap pemerintahan."
-                    text "Jurnalis berani yang selalu mengejar kebenaran. Memiliki jaringan luas dan kemampuan investigasi yang tajam dalam mengungkap kasus-kasus korupsi."
+                    text "MAYA PERTIWI (26)" style "character_name"
+                    text "Jurnalis investigasi yang kritis terhadap pemerintahan." style "character_desc"
+                    text "Jurnalis berani yang selalu mengejar kebenaran. Memiliki jaringan luas dan kemampuan investigasi yang tajam dalam mengungkap kasus-kasus korupsi." style "character_desc"
             
             # Bambang
             hbox:
                 spacing 20
                 add "gui/about/bambangnormal.png" at photo_size
                 vbox:
-                    text "BAMBANG SUDIARTO (55)" style 24 color "#00cc99"
-                    text "Mentor Arya, pejabat senior yang berintegritas."
-                    text "Pejabat senior yang menjadi panutan bagi Arya. Sosok yang tegas namun bijaksana dalam membimbing pegawai muda menuju birokrasi yang bersih."
+                    text "BAMBANG SUDIARTO (55)" style "character_name"
+                    text "Mentor Arya, pejabat senior yang berintegritas." style "character_desc"
+                    text "Pejabat senior yang menjadi panutan bagi Arya. Sosok yang tegas namun bijaksana dalam membimbing pegawai muda menuju birokrasi yang bersih." style "character_desc"
             
             # Kartika
             hbox:
                 spacing 20
                 add "gui/about/kartikanormal.png" at photo_size
                 vbox:
-                    text "KARTIKA DEWI (32)" style 24 color "#00cc99"
-                    text "Pengusaha cantik yang sering berurusan dengan tender pemerintah."
-                    text "Pengusaha sukses yang memiliki hubungan dekat dengan banyak pejabat. Kecantikan dan kecerdasannya sering digunakan untuk melancarkan kepentingan bisnisnya."
+                    text "KARTIKA DEWI (32)" style "character_name"
+                    text "Pengusaha cantik yang sering berurusan dengan tender pemerintah." style "character_desc"
+                    text "Pengusaha sukses yang memiliki hubungan dekat dengan banyak pejabat. Kecantikan dan kecerdasannya sering digunakan untuk melancarkan kepentingan bisnisnya." style "character_desc"
             
             # Hendra
             hbox:
                 spacing 20
                 add "gui/about/hendranormal.png" at photo_size
                 vbox:
-                    text "HENDRA PRIBADI (45)" style 24 color "#00cc99"
-                    text "Pejabat korup yang menjadi antagonis utama."
-                    text "Pejabat senior yang lihai dalam permainan tender dan suap-menyuap. Menjadi penghalang utama bagi upaya pemberantasan korupsi di instansi."
+                    text "HENDRA PRIBADI (45)" style "character_name"
+                    text "Pejabat korup yang menjadi antagonis utama." style "character_desc"
+                    text "Pejabat senior yang lihai dalam permainan tender dan suap-menyuap. Menjadi penghalang utama bagi upaya pemberantasan korupsi di instansi." style "character_desc"
             
             # Tia
             hbox:
                 spacing 20
                 add "gui/about/tianormal.png" at photo_size
                 vbox:
-                    text "TIA" style 24 color "#00cc99"
-                    text "Istri Arya"
-                    text "Istri yang setia mendampingi Arya. Meski sering khawatir dengan risiko yang dihadapi suaminya, ia tetap mendukung perjuangan Arya melawan korupsi."
+                    text "TIA" style "character_name"
+                    text "Istri Arya" style "character_desc"
+                    text "Istri yang setia mendampingi Arya. Meski sering khawatir dengan risiko yang dihadapi suaminya, ia tetap mendukung perjuangan Arya melawan korupsi." style "character_desc"
             
             # Dhiyal
             hbox:
                 spacing 20
                 add "gui/about/dhiyalnormal.png" at photo_size
                 vbox:
-                    text "DHIYAL" style 24 color "#00cc99"
-                    text "Teman kerja Arya"
-                    text "Rekan kerja yang memiliki kepedulian tinggi. Sering memberikan peringatan dan nasihat kepada Arya tentang bahaya yang mengintai di lingkungan kerja."
+                    text "DHIYAL" style "character_name"
+                    text "Teman kerja Arya" style "character_desc"
+                    text "Rekan kerja yang memiliki kepedulian tinggi. Sering memberikan peringatan dan nasihat kepada Arya tentang bahaya yang mengintai di lingkungan kerja." style "character_desc"
 
 ## Load and Save screens #######################################################
 ##
