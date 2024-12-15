@@ -12,7 +12,7 @@ define tia = Character("Tia", color="#fdf7c1",what_cps=2)
 define ibuarya = Character("Ibu Arya", color="#ff6aeb",what_cps=2) 
 define maya = Character("Maya", color="#55ffe5",what_cps=2) 
 define hendra = Character("Hendra", color="#a561ff",what_cps=2) 
-define petugas = Character("Petugas KPK", color="#838383",what_cps=2) 
+define petugas = Character("Petugas", color="#838383",what_cps=2) 
 define gubernur = Character("Gubernur", color="#ff5959",what_cps=2) 
 define telepon = Character("TELEPON", color="#ffd2d2",what_cps=2) 
 define pegawai1 = Character("Pegawai 1", color="#a7ff75",what_cps=2) 
@@ -68,7 +68,7 @@ image tabiranormal:
     xpos 0.8  # Posisi horizontal 80% dari lebar layar
     xzoom -1.0 
 image dhiyalcuriga:
-    "dhiyalcuriga.png"
+    "dhiyal curiga.png"
     zoom 0.3
     xzoom -1.0 
 image tiamarah:
@@ -115,24 +115,24 @@ image ibuaryanormal:
     zoom 0.4
     xpos 0.8  # Posisi horizontal 80% dari lebar layar
     xzoom -1.0 
-# image aryabangga:
-#     "zeil delighted.png"
-#     zoom 1.25
-# image aryakaget:
-#     "zeil shocked.png"
-#     zoom 1.25
-# image aryasebel:
-#     "zeil annoyed.png"
-#     zoom 1.25
-# image aryanahansebel:
-#     "zeil annoyed.png"
-#     zoom 1.25
-# image dhiyalnormal:
-#     "dhiyal normal.png"
-#     zoom 1.75
-# image hendranormal:
-#     "hendra normal.png"
-#     zoom 0.45
+image ibuaryasenang:
+    "ibuarya senang.png"
+    zoom 0.4
+    xpos 0.8  # Posisi horizontal 80% dari lebar layar
+    xzoom -1.0 
+
+image hendranormal:
+    "hendra normal.png"
+    zoom 0.33
+    xzoom -1.0 
+image hendrasenyumlicik:
+    "hendra senyumlicik.png"
+    zoom 0.33
+    xzoom -1.0 
+image hendraketawa:
+    "hendra ketawa.png"
+    zoom 0.33
+    xzoom -1.0 
 
 image pegawai1normal:
     "pegawai1 normal.png"
@@ -575,6 +575,7 @@ label c5_2:
 
     show bg kantor with wipeleft
 
+
     play sound "dialog.mp3"
     hendra "Jadi ada apa sih, coba cerita ke saya, masalah pekerjaan?"
 
@@ -609,6 +610,9 @@ label c5_2:
     play sound "dialog.mp3"
     arya "Aduh nggak deh pak saya gak berani minjam-minjam uang ke atasan."
 
+    hide hendranormal
+    show hendrasenyumlicik at right
+
     play sound "dialog.mp3"
     hendra "Siapa bilang pinjamnya ke saya?"
 
@@ -617,6 +621,7 @@ label c5_2:
 
     play sound "dialog.mp3"
     arya "Aduh pak nggak deh pak, saya gak berani."
+
 
     play sound "dialog.mp3"
     hendra "Kamu mau masalah kamu cepat selesai tidak? Saya yakin ibumu juga butuh diobati secepatnya."
@@ -646,7 +651,7 @@ label c5_2:
     play sound "dialog.mp3"
     arya "Baik pak, terimakasih banyak Pak Hendra untuk bantuannya."
 
-    hide hendranormal with easeoutright
+    hide hendrasenyumlicik with easeoutright
 
     scene bg kantorkeroco
     
@@ -750,7 +755,7 @@ label d1:
     $ renpy.pause(1)
     play sound "dialog.mp3"
     arya "(Suatu hari di kantor Arya menemukan dokumen kecurangan tender besar. Hendra terlibat, begitu juga Kartika.)"
-    show hendranormal at right with easeinright
+    show hendrasenyumlicik at right with easeinright
 
 
     play sound "dialog.mp3"
@@ -837,7 +842,7 @@ label d1_2:
 
     scene bg kantor with wipeleft
 
-    show hendranormal at right
+    show hendrasenyumlicik at right
     $ renpy.pause(1)
     show aryanormal at left with easeinleft
 
@@ -857,11 +862,15 @@ label d1_2:
     play sound "dialog.mp3"
     arya "Untungnya bagi saya, pak?"
 
+    hide hendrasenyumlicik
+    show hendraketawa at right
+
     play sound "dialog.mp3"
     hendra "(Terbahak-bahak seram)"
 
     play sound "dialog.mp3"
     arya "Saya butuh pak. Bukan bapak saja."
+
 
     play sound "dialog.mp3"
     hendra "(Tertawa perlahan) Tentu saja. Brilian. Kamu ingin berapa? 5x 10x dari biaya pengobatan ibu kamu?"
@@ -871,6 +880,8 @@ label d1_2:
     play sound "dialog.mp3"
     arya "S-saya.."
 
+    hide hendraketawa
+    show hendrasenyumlicik at right
     play sound "dialog.mp3"
     hendra "Tidak ada yang terjadi di kantor ini yang saya tidak ketahui tentu saja, Arya. Masalah uang, gampang."
 
@@ -1033,7 +1044,7 @@ label e1:
     arya "Dan aku tahu, selama ada orang seperti kamu, aku tidak akan berjuang sendirian"
 
     scene bg rumah with wipeleft
-    show ibuaryanormal at right
+    show ibuaryasenang at right
     $ renpy.pause(1)
     show aryanormal at left with easeinleft
 
@@ -1072,7 +1083,7 @@ label e1:
 
 label e2:
     scene bg kantor with wipeleft
-    show hendranormal at right
+    show hendrasenyumlicik at right
     $ renpy.pause(1)
     show aryanormal at left with easeinleft
 
@@ -1133,7 +1144,7 @@ label e2:
     
     show aryanormal at left
     $ renpy.pause(1)
-    show hendranormal at right with easeinright
+    show hendrasenyumlicik at right with easeinright
     
     play sound "dialog.mp3"
     hendra "Bagaimana rasanya , Arya? Semua berjalan mulus, kan? Lihat dirimu sekarang. Pejabat muda yang karirnya melesat."
