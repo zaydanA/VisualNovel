@@ -12,7 +12,7 @@ define tia = Character("Tia", color="#fdf7c1",what_cps=2)
 define ibuarya = Character("Ibu Arya", color="#ff6aeb",what_cps=2) 
 define maya = Character("Maya", color="#55ffe5",what_cps=2) 
 define hendra = Character("Hendra", color="#a561ff",what_cps=2) 
-define petugas = Character("Petugas", color="#838383",what_cps=2) 
+define petugas = Character("Petugas", color="#cacaca",what_cps=2) 
 define gubernur = Character("Gubernur", color="#ff5959",what_cps=2) 
 define telepon = Character("TELEPON", color="#ffd2d2",what_cps=2) 
 define pegawai1 = Character("Pegawai 1", color="#a7ff75",what_cps=2) 
@@ -89,6 +89,9 @@ image tiabangga:
 image mayanormal:
     "maya normal.png"
     zoom 0.3
+image mayakecewa:
+    "maya kecewa.png"
+    zoom 0.3
 image mayanelpon:
     "maya nelpon.png"
     zoom 0.3
@@ -145,22 +148,93 @@ image teleponnormal:
     "telepon.png"
     zoom 1.85
     
+image emojiflat:
+    Animation(
+        im.Scale("emojiflat/flat1.png", 200, 200), 0.2,
+        im.Scale("emojiflat/flat2.png", 200, 200), 0.2
+    )
+    zoom 0.5  
+    ypos 300  
+    linear 2.0 zoom 1.0 ypos 200  # Scale up and move upward
+    repeat
+image emojisenang:
+    Animation(
+        im.Scale("emojisenang/senang_fixx_1.png", 200, 200), 0.2,
+        im.Scale("emojisenang/senang_fixx_2.png", 200, 200), 0.2,
+        im.Scale("emojisenang/senang_fixx_3.png", 200, 200), 0.2,
+        im.Scale("emojisenang/senang_fixx_4.png", 200, 200), 0.2,
+        im.Scale("emojisenang/senang_fixx_5.png", 200, 200), 0.2,
+        im.Scale("emojisenang/senang_fixx_6.png", 200, 200), 0.2,
+    )
+    zoom 0.5  
+    ypos 300 
+    linear 2.0 zoom 1.0 ypos 200  # Scale up and move upward
+    repeat
+image emojihatidegdeg:
+    Animation(
+        im.Scale("emojihatidegdeg/hati degdeg fix1.png", 300, 300), 0.2,
+        im.Scale("emojihatidegdeg/hati degdeg fix2.png", 300, 300), 0.2
+    )
+    zoom 0.5 
+    ypos 300 
+    linear 2.0 zoom 1.0 ypos 200  # Scale up and move upward
+    repeat
+image emojimarah:
+    Animation(
+        im.Scale("emojimarah/marah_1.png", 200, 200), 0.2,
+        im.Scale("emojimarah/marah_2.png", 200, 200), 0.2,
+        im.Scale("emojimarah/marah_3.png", 200, 200), 0.2,
+        im.Scale("emojimarah/marah_4.png", 200, 200), 0.2,
+        im.Scale("emojimarah/marah_5.png", 200, 200), 0.2,
+        im.Scale("emojimarah/marah_6.png", 200, 200), 0.2,
+        im.Scale("emojimarah/marah_7.png", 200, 200), 0.2,
+        im.Scale("emojimarah/marah_8.png", 200, 200), 0.2,
+    )
+    zoom 0.5 
+    ypos 300  
+    linear 2.0 zoom 1.0 ypos 200  # Scale up and move upward
+    repeat
+image emojisedih:
+    Animation(
+        im.Scale("emojisedih/sedih1.png", 200, 200), 0.2,
+        im.Scale("emojisedih/sedih2.png", 200, 200), 0.2,
+        im.Scale("emojisedih/sedih3.png", 200, 200), 0.2,
+        im.Scale("emojisedih/sedih4.png", 200, 200), 0.2,
+
+    )
+    zoom 0.5 
+    ypos 300 
+    linear 2.0 zoom 1.0 ypos 200  # Scale up and move upward
+    repeat
+image emojipatahhati:
+    Animation(
+        im.Scale("emojipatahhati/patah hati fix 1.png", 300, 300), 0.2,
+        im.Scale("emojipatahhati/patah hati fix 2.png", 300, 300), 0.2,
+        im.Scale("emojipatahhati/patah hati fix 3.png", 300, 300), 0.2,
+        im.Scale("emojipatahhati/patah hati fix 4.png", 300, 300), 0.2,
+        im.Scale("emojipatahhati/patah hati fix 5.png", 300, 300), 0.2,
+    )
+    zoom 0.5 
+    ypos 300 
+    linear 2.0 zoom 1.0 ypos 200  # Scale up and move upward
+    repeat
+
 transform midleft:
-    xpos 0.2  # Horizontal center (50% of the screen width)
-    ypos 1.0  # Vertical center (50% of the screen height)
+    xpos 0.2  
+    ypos 1.0  
 transform midright:
-    xpos 0.8  # Horizontal center (50% of the screen width)
-    ypos 1.0  # Vertical center (50% of the screen height)
+    xpos 0.8  
+    ypos 1.0  
 
 # The game starts here.
 
 label start:
     show screen custom_game_menu_button
     scene bg depankantor
-
     # play sound "audio 1.mp3"
     # play music "Lagu KWN Scene 1.mp3" fadein 2 fadeout 2
     show aryasmile with easeinleft
+
 
     play sound "dialog.mp3"
 
@@ -194,6 +268,7 @@ label a2_1:
 
     hide aryanormal
     show aryasmile
+    show emojisenang 
     play sound "dialog.mp3"
     arya "Aku masuk lebih awal aja deh, sekalian liatin berkas-berkas"
 
@@ -208,6 +283,7 @@ label a2_1:
     # play music "Lagu KWN Scene 2 HIJAU.mp3" fadein 2 fadeout 2
     $ renpy.pause(1)
     show bambangsenang at right with moveinright
+    show emojisenang at Position(xpos=0.81, ypos=0.20)
 
     play sound "dialog.mp3"
     bambang "Wah, si anak baru rajin sekali. Saya melihat potensi bagus dalam dirimu."
@@ -238,7 +314,8 @@ label a2_1:
     return
 
 label a2_2:
-
+    
+    show emojiflat 
     play sound "dialog.mp3"
     arya "Ah nanti aja, deh. Ngapain juga dateng awal."
 
@@ -252,6 +329,7 @@ label a2_2:
 
     show bambangmarah at right with moveinright
 
+    show emojimarah at Position(xpos=0.81, ypos=0.20)
     play sound "dialog.mp3"
     hide aryanormal
     show aryapanik at left
@@ -275,12 +353,9 @@ label a2_2:
     jump b1
 
 
-# label b1: 
 label b1: 
 
     scene bg ruangrapat with wipeleft
-
-
 
     show kartikanormal with easeinright
     show aryanormal at left with easeinleft
@@ -312,9 +387,11 @@ label c3_1:
     
     hide aryanormal
     show aryasmile at left
+    show emojisenang at Position(xpos=0.2, ypos=0.25)
     # play music "Lagu KWN Scene 3 MERAH.mp3" fadein 2 fadeout 2
     play sound "dialog.mp3"
     arya "Wah, boleh aja. Mau jalan bareng ke sana juga?"
+    
 
     play sound "dialog.mp3"
     kartika "Boleh, Mas."
@@ -329,9 +406,12 @@ label c3_1:
 
     hide kartikanormal
     show kartikasexy 
+    show emojihatidegdeg at Position(xpos=0.5, ypos=0.35)
     play sound "dialog.mp3"
     kartika "Oke Mas, sebentar ya aku ke toilet dulu."
     
+    hide emojisenang
+    hide emojihatidegdeg
     hide kartikasexy with easeoutright
     $ renpy.pause(1.5)
     hide aryasmile
@@ -352,11 +432,14 @@ label c3_1:
             play sound "dialog.mp3"
 
     hide dhiyaltebak
+    show emojimarah at Position(xpos=0.2, ypos=0.25)
     show dhiyalmarah at right
     dhiyal "Makan berdua sama Mba Kartika lah, kamu kan punya istri, gimana sih!"
 
     hide aryanormal
     show aryamarah at left
+
+
     play sound "dialog.mp3"
     arya "Apaansih Yal, Orang saya mau bahas kerjaan doang, gak ada sangkut pautnya sama istri saya."
 
@@ -381,6 +464,7 @@ label c3_1:
 
 label c3_2:
 
+    show emojiflat at Position(xpos=0.2, ypos=0.25)
     hide aryanormal
     show aryasmile2 at left
     # play music "Lagu KWN Scene 3 HIJAU.mp3" fadein 2 fadeout 2
@@ -389,17 +473,20 @@ label c3_2:
     play sound "dialog.mp3"
     arya "Saya pamit duluan ya. Kita bahas besok pada saat jam kerja saja."
 
-
     hide kartikanormal
     show kartikasexy 
+    show emojihatidegdeg at Position(xpos=0.5, ypos=0.35)
     play sound "dialog.mp3"
     kartika "Oke, Mas. Semangat yaa."
     
+    hide emojiflat
+    hide emojihatidegdeg
+
     hide kartikasexy with easeoutright
     jump c4_1
 
 label c4_2:
-    scene bg rumah with wipeleft
+    scene bg rumahmalam with wipeleft
     $ renpy.pause(1)
     show aryanormal at left with easeinleft
     $ renpy.pause(0.5)
@@ -506,7 +593,7 @@ label c5:
             jump c5_3
 
 label c5_1:
-    scene bg rumah with wipeleft
+    scene bg rumahmalam with wipeleft
     show aryabingung at left
 
     play sound "dialog.mp3"
@@ -690,6 +777,7 @@ label c5_2:
         "Pak Hendra":
             play sound "dialog.mp3"
     
+    show emojimarah at Position(xpos=0.2, ypos=0.25)
     dhiyal "Jawabannya Pak Hendra! Kalau urusannya sama Pak Hendra saya yakin dia ngajak kamu main kotor kan?"
 
     hide aryasmile2
@@ -1164,11 +1252,12 @@ label e2:
 
     show aryanormal at left
     $ renpy.pause(1)
-    show mayanormal at right with easeinright
-
+    show mayakecewa at right with easeinright
+    show emojipatahhati at Position(xpos=0.8, ypos=0.3)
     play sound "dialog.mp3"
     maya "Arya, aku dengar rumor tentang kamu… kamu beneran nerima uang dari Pak Hendra?"
 
+    show emojiflat at Position(xpos=0.2, ypos=0.25)
     play sound "dialog.mp3"
     arya "Maya, aku terpaksa… ibuku sakit, aku perlu uang untuk pengobatannya. Aku gak punya pilihan lain May."
 
@@ -1189,8 +1278,8 @@ label e2:
 
     play sound "dialog.mp3"
     maya "Aku harap, uang itu layak untuk kehilangan segalanya."
-
-    hide mayanormal with easeoutright
+    hide emojipatahhati
+    hide mayakecewa with easeoutright
 
     jump epilog
 
@@ -1259,7 +1348,7 @@ label e3:
     play sound "dialog.mp3"
     arya "Iya May, aku cuman berharap kita bisa bertahan sampai akhir."
 
-    scene bg rumah with wipeleft
+    scene bg rumahmalam with wipeleft
 
     show aryanormal at left with easeinleft
     $ renpy.pause(1)
@@ -1330,7 +1419,7 @@ label e3:
     play sound "dialog.mp3"
     arya "Selama kita berkomitmen pada integritas dan kebenaran, kita pasti bisa membuat perbedaan."
 
-    scene bg rooftopmalam with wipeleft
+    scene bg rooftop with wipeleft
     show aryasmile at left with easeinleft
     show mayanormal at right with easeinright
     
