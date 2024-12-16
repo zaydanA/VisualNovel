@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 2024-12-16 07:45:44 UTC
 Windows-10-10.0.22631
 Ren'Py 8.3.2.24090902
@@ -8,6 +9,18 @@ Loading script took 0.26s
 Loading save slot metadata took 0.03s
 Loading persistent took 0.00s
 Running init code took 0.04s
+=======
+2024-12-16 15:29:34 UTC
+macOS-15.2-arm64-arm-64bit
+Ren'Py 8.3.3.24111502
+
+Early init took 0.03s
+Loading error handling took 0.02s
+Loading script took 0.07s
+Loading save slot metadata took 0.03s
+Loading persistent took 0.00s
+Running init code took 0.05s
+>>>>>>> Stashed changes
 Loading analysis data took 0.01s
 Analyze and compile ATL took 0.00s
 Reloading save slot metadata took 0.02s
@@ -22,16 +35,29 @@ nvdrs: Loaded, about to disable thread optimizations.
 nvdrs: Disabled thread optimizations.
 Creating interface object took 0.26s
 Cleaning stores took 0.00s
+<<<<<<< Updated upstream
 Init translation took 0.04s
 Build styles took 0.00s
 Load screen analysis took 0.00s
 Analyze screens took 0.01s
 Save screen analysis took 0.02s
 Prepare screens took 0.06s
+=======
+Init translation took 0.02s
+Build styles took 0.00s
+Load screen analysis took 0.02s
+Analyze screens took 0.00s
+Save screen analysis took 0.00s
+Prepare screens took 0.03s
+>>>>>>> Stashed changes
 Save pyanalysis. took 0.00s
 Save bytecode. took 0.03s
 Running _start took 0.00s
+<<<<<<< Updated upstream
 Interface start took 0.06s
+=======
+Interface start took 1.15s
+>>>>>>> Stashed changes
 
 Initializing gl2 renderer:
 primary display bounds: (0, 0, 3440, 1440)
