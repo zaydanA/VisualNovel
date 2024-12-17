@@ -148,6 +148,11 @@ image pegawai2normal:
 image teleponnormal:
     "telepon.png"
     zoom 1.85
+
+image bg theend:
+    "theend.png" 
+    xalign 0.5
+    yalign 0.5
     
 image emojiflat:
     Animation(
@@ -1451,3 +1456,8 @@ label e3:
 label epilog:
     scene bg kantorkeroco with wipeleft
     $ renpy.pause(2)
+
+    scene bg theend with fade
+    $ renpy.pause(10)
+
+    return
