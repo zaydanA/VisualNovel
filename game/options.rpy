@@ -79,7 +79,7 @@ Project Team:
 ## distribution. This must be ASCII-only, and must not contain spaces, colons,
 ## or semicolons.
 
-define build.name = "KWN"
+define build.name = "PKWN"
 
 
 ## Sounds and music ############################################################
