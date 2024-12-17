@@ -65,7 +65,7 @@ image dhiyalmarah:
 image tabiranormal:
     "tabira.png"
     zoom 0.3
-    xpos 0.8  # Posisi horizontal 80% dari lebar layar
+    xpos 0.8 
     xzoom -1.0 
 image dhiyalcuriga:
     "dhiyal curiga.png"
@@ -231,8 +231,9 @@ transform midright:
 label start:
     show screen custom_game_menu_button
     scene bg depankantor
+    play sound "dialog.mp3"
     # play sound "audio 1.mp3"
-    # play music "Lagu KWN Scene 1.mp3" fadein 2 fadeout 2
+    play music "Lagu KWN Scene 1 Original.mp3" fadein 2 fadeout 2
     show aryasmile with easeinleft
 
 
@@ -388,7 +389,7 @@ label c3_1:
     hide aryanormal
     show aryasmile at left
     show emojisenang at Position(xpos=0.2, ypos=0.25)
-    # play music "Lagu KWN Scene 3 MERAH.mp3" fadein 2 fadeout 2
+    
     play sound "dialog.mp3"
     arya "Wah, boleh aja. Mau jalan bareng ke sana juga?"
     
