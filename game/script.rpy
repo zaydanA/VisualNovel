@@ -139,11 +139,11 @@ image hendraketawa:
 
 image pegawai1normal:
     "pegawai1 normal.png"
-    zoom 1.5
+    zoom 0.33
+    xzoom -1.0 
 image pegawai2normal:
     "pegawai2 normal.png"
-    zoom 1.55
-    xzoom -1.0 
+    zoom 0.33
 
 image teleponnormal:
     "telepon.png"
