@@ -3,20 +3,20 @@
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
 
-define arya = Character("Arya", color="#d6d6ff",what_cps=2)
-define bambang = Character("Bambang", color="#FFC0CB",what_cps=2) 
-define bosbesar = Character("Bos Besar", color="#00fff2",what_cps=2) 
-define kartika = Character("Kartika", color="#00ff4c",what_cps=2) 
-define dhiyal = Character("Dhiyal", color="#cab600",what_cps=2) 
-define tia = Character("Tia", color="#fdf7c1",what_cps=2) 
-define ibuarya = Character("Ibu Arya", color="#ff6aeb",what_cps=2) 
-define maya = Character("Maya", color="#55ffe5",what_cps=2) 
-define hendra = Character("Hendra", color="#a561ff",what_cps=2) 
-define petugas = Character("Petugas", color="#cacaca",what_cps=2) 
-define gubernur = Character("Gubernur", color="#ff5959",what_cps=2) 
-define telepon = Character("TELEPON", color="#ffd2d2",what_cps=2) 
-define pegawai1 = Character("Pegawai 1", color="#a7ff75",what_cps=2) 
-define pegawai2 = Character("Pegawai 2", color="#eeffc7",what_cps=2) 
+define arya = Character("Arya", color="#ffffff",what_cps=2)
+define bambang = Character("Bambang", color="#ffffff",what_cps=2) 
+define bosbesar = Character("Bos Besar", color="#ffffff",what_cps=2) 
+define kartika = Character("Kartika", color="#ffffff",what_cps=2) 
+define dhiyal = Character("Dhiyal", color="#ffffff",what_cps=2) 
+define tia = Character("Tia", color="#ffffff",what_cps=2) 
+define ibuarya = Character("Ibu Arya", color="#ffffff",what_cps=2) 
+define maya = Character("Maya", color="#ffffff",what_cps=2) 
+define hendra = Character("Hendra", color="#ffffff",what_cps=2) 
+define petugas = Character("Petugas", color="#ffffff",what_cps=2) 
+define gubernur = Character("Gubernur", color="#ffffff",what_cps=2) 
+define telepon = Character("TELEPON", color="#ffffff",what_cps=2) 
+define pegawai1 = Character("Pegawai 1", color="#ffffff",what_cps=2) 
+define pegawai2 = Character("Pegawai 2", color="#ffffff",what_cps=2) 
 
 image aryanormal:
     "arya normal.png"
@@ -227,13 +227,12 @@ transform midright:
     ypos 1.0  
 
 # The game starts here.
-
 label start:
     show screen custom_game_menu_button
     scene bg depankantor
+    play music "Lagu KWN Scene 1 Original.mp3" fadein 2 fadeout 2
     play sound "dialog.mp3"
     # play sound "audio 1.mp3"
-    play music "Lagu KWN Scene 1 Original.mp3" fadein 2 fadeout 2
     show aryasmile with easeinleft
 
 
@@ -281,7 +280,7 @@ label a2_1:
 
     hide aryasmile
 
-    # play music "Lagu KWN Scene 2 HIJAU.mp3" fadein 2 fadeout 2
+    play music "Lagu KWN Scene 2 HIJAU Original.mp3" fadein 2 fadeout 2
     $ renpy.pause(1)
     show bambangsenang at right with moveinright
     show emojisenang at Position(xpos=0.81, ypos=0.20)
@@ -325,7 +324,7 @@ label a2_2:
 
     show aryanormal at left
 
-    # play music "Lagu KWN Scene 2 MERAH.mp3" fadein 2 fadeout 2
+    play music "Lagu KWN Scene 2 MERAH Original.mp3" fadein 2 fadeout 2
     $ renpy.pause(1)
 
     show bambangmarah at right with moveinright
@@ -468,7 +467,7 @@ label c3_2:
     show emojiflat at Position(xpos=0.2, ypos=0.25)
     hide aryanormal
     show aryasmile2 at left
-    # play music "Lagu KWN Scene 3 HIJAU.mp3" fadein 2 fadeout 2
+    play music "Lagu KWN Scene 3 Original.mp3" fadein 2 fadeout 2
     play sound "dialog.mp3"
     arya "Aduh, maaf banget. Saya ada urusan lain habis ini, Mba Kartika."
     play sound "dialog.mp3"
@@ -528,6 +527,7 @@ label c4_1:
     show aryanelpon at midleft with move
 
     play sound "dialog.mp3"
+    play music "Lagu KWN Scene 4 Original.mp3" fadein 2 fadeout 2
     arya "Halo sayang, kenapa tiba-tiba nelpon?"
 
     show tianelpon at right with easeinright
@@ -848,6 +848,7 @@ label d1:
 
 
     play sound "dialog.mp3"
+    play music "Lagu KWN Scene 5 Original.mp3" fadein 2 fadeout 2
     hendra "Anak muda, kamu pintar. Sayang kalau karir bagusmu harus berakhir cepat. Mari kita bicarakan dengan kepala dingin."
 
     menu:
@@ -1047,6 +1048,7 @@ label d1_3:
 label e1:
     play sound "scene.mp3"
     scene bg kpk with wipeleft
+    play music "Lagu KWN Scene 6 A.mp3" fadein 2 fadeout 2
 
     #petugas KPK
     show petugaskpknormal at right
@@ -1183,7 +1185,9 @@ label e2:
     hendra "Anggap saja sebagai bonus kecil untuk semua dedikasi yang sudah kamu tunjukkan."
 
     hide aryanormal
+
     show aryasmile2 at left
+    play music "Lagu KWN Scene 6 B.mp3" fadein 2 fadeout 2
     play sound "dialog.mp3"
     arya "Ini… terlalu banyak, Pak. Saya tidak bisa menerima ini."
 
@@ -1304,6 +1308,7 @@ label e3:
     show aryanelpon at left with move
 
     play sound "dialog.mp3"
+    play music "Lagu KWN Scene 6 C.mp3" fadein 2 fadeout 2
     arya "Halo, Maya."
 
     show mayanelpon at right with easeinright
