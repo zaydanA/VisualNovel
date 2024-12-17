@@ -1296,7 +1296,7 @@ label e3:
     scene bg kantorkeroco with wipeleft
     
     show aryanormal
-
+    play music "Lagu KWN Scene 5 Original.mp3" fadein 2 fadeout 2
     play sound "dialog.mp3"
     arya "Ini dia... semua bukti yang aku butuhkan."
 
@@ -1308,7 +1308,6 @@ label e3:
     show aryanelpon at left with move
 
     play sound "dialog.mp3"
-    play music "Lagu KWN Scene 6 C.mp3" fadein 2 fadeout 2
     arya "Halo, Maya."
 
     show mayanelpon at right with easeinright
@@ -1401,6 +1400,7 @@ label e3:
     $ renpy.pause(1)
     
     show pegawai1normal at right with easeinright
+    play music "Lagu KWN Scene 6 C.mp3" fadein 2 fadeout 2
 
     play sound "dialog.mp3"
     pegawai1 "Pak Arya, kami hanya ingin bilang, kami sangat terinspirasi oleh keberanian Bapak."
