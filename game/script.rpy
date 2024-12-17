@@ -1457,7 +1457,7 @@ label epilog:
     scene bg kantorkeroco with wipeleft
     $ renpy.pause(2)
 
-    scene bg theend with fade
+    scene bg selesai with fade
     $ renpy.pause(10)
 
     return
