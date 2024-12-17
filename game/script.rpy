@@ -143,6 +143,7 @@ image pegawai1normal:
 image pegawai2normal:
     "pegawai2 normal.png"
     zoom 1.55
+    xzoom -1.0 
 
 image teleponnormal:
     "telepon.png"
