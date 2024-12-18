@@ -150,9 +150,12 @@ image teleponnormal:
     zoom 1.85
 
 image bg theend:
-    "theend.png" 
+    "bg selesai.png" 
     xalign 0.5
     yalign 0.5
+
+image bg disclaimer:
+    "disclaimer.png" 
     
 image emojiflat:
     Animation(
@@ -235,6 +238,10 @@ transform midright:
 # The game starts here.
 label start:
     show screen custom_game_menu_button
+    scene bg disclaimer with fade
+    play sound "dialog.mp3"
+    $ renpy.pause(5)
+
     scene bg depankantor
     play music "Lagu KWN Scene 1 Original.mp3" fadein 2 fadeout 2
     play sound "dialog.mp3"

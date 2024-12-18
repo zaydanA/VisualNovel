@@ -661,6 +661,9 @@ screen about():
                 vbox style "about_image_container":
                     add "gui/about/aceline.png" at photo_size
                     text "Aceline Ardiwinata Putri\n17223031 - FSRD" style "about_person"
+                vbox style "about_image_container":
+                    add "gui/about/arfa.png" at photo_size
+                    text "Arfa Nasyahla\n17323033 - FSRD" style "about_person"
             hbox:
                 spacing 20
                 vbox style "about_image_container":
